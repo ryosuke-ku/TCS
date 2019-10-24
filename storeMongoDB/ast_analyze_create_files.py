@@ -155,17 +155,35 @@ if __name__ == '__main__':
                             db.testList.insert_one(post)  
 
                         print('systems/' + PPath_last)
-                        file = open('systems/' + PPath_last,'a') 
+                        # file = open('systems/' + PPath_last,'a') 
                         line_start = int(ProductionmethodLine_list[ProductionMethod][0])-1
                         line_end = int(ProductionmethodLine_list[ProductionMethod][1])
                         print(PPath[num])
                         f = open(PPath[num], "r", encoding="utf-8")
                         lines = f.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
                         f.close()
-                        print('lines : ' + str(len(lines)))
-
+                        # print('lines : ' + str(len(lines)))
+                        origin_file = open('systems/' + PPath_last, "r", encoding="utf-8")
+                        origin_lines = origin_file.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
+                        # origin_lines.close()
+                        print(len(origin_lines))
                         print('<Production Code>')
-                        for x in range(line_start,line_end):
-                            srcLow = lines[x].replace('\n', '') + '\n'
-                            print(srcLow)
-                            file.write(srcLow)
+                        # for x in range(line_start,line_end):
+                        #     srcLow = lines[x].replace('\n', '') + '\n'
+                        #     print(srcLow)
+                        #     file.write(srcLow)
+
+                        for row in range(len(origin_lines)):
+                            print(row)
+                            if row >= startline and row <= endline:
+                                origin_lines[row] = lines[row].replace('\n', '') + '\n'
+
+                        print(origin_lines)
+
+                        with open('systems/' + PPath_last, 'w', encoding="utf-8") as f:
+                            for line in origin_lines:
+                                f.write(line)
+                        # for x in range(line_start,line_end):
+                        #     srcLow = lines[x].replace('\n', '') + '\n'
+                        #     print(srcLow)
+                        #     file.write(srcLow)
