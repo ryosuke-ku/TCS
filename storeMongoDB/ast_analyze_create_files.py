@@ -104,7 +104,8 @@ if __name__ == '__main__':
 
     project = 'utility'
     data_set = glob.glob('D:\\ryosuke-ku\\data_set\\Git_20161108\\' + project + '\\*')
-
+    
+    file_num = 0
     for project_data in data_set:
         num_slash = project_data.rfind("\\")
         project_folder = project_data[num_slash + 1:]
@@ -130,6 +131,7 @@ if __name__ == '__main__':
                 ProductionmethodLine_list = AstProcessorProductionLine(None, BasicInfoListener()).execute(PPath[num]) #プロダクションファイル内のメソッド名をすべて取得
                 TestmethodLine_list = AstProcessorTestLine(None, BasicInfoListener()).execute(TPath[num]) #プロダクションファイル内のメソッド名をすべて取得
 
+                
                 for ProductionMethod in Productionmethods_list:
                     rd = rdict(testDict)
                     remethods = rd["^(?=.*" + ProductionMethod + ").*$"]
@@ -162,28 +164,29 @@ if __name__ == '__main__':
                         f = open(PPath[num], "r", encoding="utf-8")
                         lines = f.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
                         f.close()
-                        # print('lines : ' + str(len(lines)))
-                        origin_file = open('systems/' + PPath_last, "r", encoding="utf-8")
-                        origin_lines = origin_file.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
-                        # origin_lines.close()
-                        print(len(origin_lines))
-                        print('<Production Code>')
-                        # for x in range(line_start,line_end):
-                        #     srcLow = lines[x].replace('\n', '') + '\n'
-                        #     print(srcLow)
-                        #     file.write(srcLow)
+                        path_dir = PPath_last[:PPath_last.rfind('/')+1]
+                        file_name = PPath_last[PPath_last.rfind('/')+1:][:PPath_last[PPath_last.rfind('/')+1:].rfind('.')]
+                        print('path_dir:' + path_dir)
+                        print('file_name:' + file_name)
+                        os.makedirs('systems/' + path_dir, exist_ok=True)
+                        file = open('systems/' + path_dir + file_name + '_' + str(file_num) + '.java', "w")
+                        
+                        for line in range(len(lines)):
+                            file.write('\n')
 
-                        for row in range(len(origin_lines)):
+                        file.close()
+                        file = open('systems/' + path_dir + file_name + '_' + str(file_num) + '.java', "r", encoding="utf-8")
+                        file_lines = file.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
+
+                        for row in range(len(file_lines)):
                             print(row)
                             if row >= startline and row <= endline:
-                                origin_lines[row] = lines[row].replace('\n', '') + '\n'
+                                file_lines[row] = lines[row].replace('\n', '') + '\n'
+                        file.close()
+                        print(file_lines)
 
-                        print(origin_lines)
-
-                        with open('systems/' + PPath_last, 'w', encoding="utf-8") as f:
-                            for line in origin_lines:
-                                f.write(line)
-                        # for x in range(line_start,line_end):
-                        #     srcLow = lines[x].replace('\n', '') + '\n'
-                        #     print(srcLow)
-                        #     file.write(srcLow)
+                        with open('systems/' + path_dir + file_name + '_' + str(file_num) + '.java', 'w', encoding="utf-8") as f:
+                            for file_line in file_lines:
+                                f.write(file_line)
+                        
+                        file_num += 1
