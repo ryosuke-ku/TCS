@@ -38,9 +38,15 @@ if __name__ == '__main__':
 
     for utility_path in utility_allPath:
         print(utility_path)
+        f = open(utility_path, "r", encoding="utf-8")
+        lines = f.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
+        f.close()
+        print(len(lines))
         utility_cut = re.sub(r"C:\\Users\\ryosuke-ku\\Desktop\\utility\\", "", utility_path)
         utility_dir = utility_cut[:utility_cut.rfind('\\')]
 
         print(utility_dir)
         os.makedirs('systems\\' + utility_dir, exist_ok=True)
         file = open('systems\\' + utility_cut,'w')
+        for line in range(len(lines)):
+            file.write('\n')
