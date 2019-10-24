@@ -162,6 +162,7 @@ if __name__ == '__main__':
                         f = open(PPath[num], "r", encoding="utf-8")
                         lines = f.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
                         f.close()
+                        print('lines : ' + len(lines))
                         print('<Production Code>')
                         for x in range(line_start,line_end):
                             srcLow = lines[x].replace('\n', '') + '\n'
