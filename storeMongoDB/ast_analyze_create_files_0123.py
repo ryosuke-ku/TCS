@@ -97,162 +97,162 @@ def testMethodMapCall(Path):
 
 
 if __name__ == '__main__':
-    # makeFolder()
-    x = 'D:/ryosuke-ku/data_set/Git_20161108/1234/0xCopy_RelaxFactory/RelaxFactory/rxf-core/src/main/java/rxf/core/Rfc822HeaderState.java'
-    Productionmethods_list = AstProcessorProduction(None, BasicInfoListener()).execute(x) #プロダクションファイル内のメソッド名をすべて取得
-    # print(Productionmethods_list)
-    # print(len(Productionmethods_list))
+    # # makeFolder()
+    # x = 'D:/ryosuke-ku/data_set/Git_20161108/1234/0xCopy_RelaxFactory/RelaxFactory/rxf-core/src/main/java/rxf/core/Rfc822HeaderState.java'
+    # Productionmethods_list = AstProcessorProduction(None, BasicInfoListener()).execute(x) #プロダクションファイル内のメソッド名をすべて取得
+    # # print(Productionmethods_list)
+    # # print(len(Productionmethods_list))
 
-    ProductionmethodLine_list = AstProcessorProductionLine(None, BasicInfoListener()).execute(x) #プロダクションファイル内のメソッド名をすべて取得
-    print(ProductionmethodLine_list)
-    # print(len(ProductionmethodLine_list))
+    # ProductionmethodLine_list = AstProcessorProductionLine(None, BasicInfoListener()).execute(x) #プロダクションファイル内のメソッド名をすべて取得
+    # print(ProductionmethodLine_list)
+    # # print(len(ProductionmethodLine_list))
 
-    y = 'D:/ryosuke-ku/data_set/Git_20161108/1234/0xCopy_RelaxFactory/RelaxFactory/rxf-couch/src/test/java/rxf/couch/Rfc822HeaderStateTest.java'
-    TestmethodLine_list = AstProcessorTestLine(None, BasicInfoListener()).execute(y) #プロダクションファイル内のメソッド名をすべて取得
-    # print(TestmethodLine_list)
+    # y = 'D:/ryosuke-ku/data_set/Git_20161108/1234/0xCopy_RelaxFactory/RelaxFactory/rxf-couch/src/test/java/rxf/couch/Rfc822HeaderStateTest.java'
+    # TestmethodLine_list = AstProcessorTestLine(None, BasicInfoListener()).execute(y) #プロダクションファイル内のメソッド名をすべて取得
+    # # print(TestmethodLine_list)
 
-    Testmethodcalls_list = AstProcessorTestMethodCall(None, BasicInfoListener()).execute(y) #target_file_path(テストファイル)内のメソッド名をすべて取得
-    # print(Testmethodcalls_list)
+    # Testmethodcalls_list = AstProcessorTestMethodCall(None, BasicInfoListener()).execute(y) #target_file_path(テストファイル)内のメソッド名をすべて取得
+    # # print(Testmethodcalls_list)
 
-    testDict = testMethodMapCall(y)
+    # testDict = testMethodMapCall(y)
 
 
-    # print(testDict)
-    rd = rdict(testDict)
+    # # print(testDict)
+    # rd = rdict(testDict)
 
-    # print(remethods)
+    # # print(remethods)
 
    
-    for ProductionMethod in Productionmethods_list:
-        # print(ProductionMethod)
+    # for ProductionMethod in Productionmethods_list:
+    #     # print(ProductionMethod)
 
-        PMethod = ProductionMethod[:ProductionMethod.find('_')]
-        print(PMethod)
-        remethods = rd["^(?=.*" + PMethod + ").*$"]
-        rts = list(set(remethods))
-        if len(remethods) == 0:
-            pass
-        else:
-            for rt in rts:
-                PMethod_words = []
-                reuseTestMethods = []
-                for PMethod_devide in re.split('([a-z]+)([A-Z][a-z]+)|([A-Z][a-z]+)', PMethod):
-                    if PMethod_devide != None and PMethod_devide != '':
-                        PMethod_words.append(PMethod_devide)
-                # print('1 Production Method:' + ProductionMethod + ' , ' + '1 Test Method:' + rt)
-                # print(PMethod_words)
+    #     PMethod = ProductionMethod[:ProductionMethod.find('_')]
+    #     print(PMethod)
+    #     remethods = rd["^(?=.*" + PMethod + ").*$"]
+    #     rts = list(set(remethods))
+    #     if len(remethods) == 0:
+    #         pass
+    #     else:
+    #         for rt in rts:
+    #             PMethod_words = []
+    #             reuseTestMethods = []
+    #             for PMethod_devide in re.split('([a-z]+)([A-Z][a-z]+)|([A-Z][a-z]+)', PMethod):
+    #                 if PMethod_devide != None and PMethod_devide != '':
+    #                     PMethod_words.append(PMethod_devide)
+    #             # print('1 Production Method:' + ProductionMethod + ' , ' + '1 Test Method:' + rt)
+    #             # print(PMethod_words)
                 
-                for PMethod_word in PMethod_words:
-                    # print(PMethod_word.lower())
-                    if PMethod_word.lower() in rt.lower():
-                        # reuseTestMethods.append(rt)
+    #             for PMethod_word in PMethod_words:
+    #                 # print(PMethod_word.lower())
+    #                 if PMethod_word.lower() in rt.lower():
+    #                     # reuseTestMethods.append(rt)
 
-                        reuseTestCases = list(set(reuseTestMethods))
-                        print('Production Method:' + ProductionMethod + ' , ' + 'Test Method:' + rt)
-                # print(reuseTestCases)
+    #                     reuseTestCases = list(set(reuseTestMethods))
+    #                     print('Production Method:' + ProductionMethod + ' , ' + 'Test Method:' + rt)
+    #             # print(reuseTestCases)
 
 
 
-    # clint = MongoClient()
-    # db = clint['testList']
+    clint = MongoClient()
+    db = clint['testList']
 
-    # project = '1234'
-    # data_set = glob.glob('D:\\ryosuke-ku\\data_set\\Git_20161108\\' + project + '\\*')
+    project = '1234'
+    data_set = glob.glob('D:\\ryosuke-ku\\data_set\\Git_20161108\\' + project + '\\*')
     
     
-    # for project_data in data_set:
-    #     project_folder = project_data[project_data.rfind("\\") + 1:]
-    #     # print(project_folder)
-    #     # 00joshi_hqapp
-    #     project_name = str(project) + '/' + project_folder
-    #     # print(project_name)
-    #     # 1234/00joshi_hqapp
-    #     PPath = printProductionPath(project_name)
-    #     TPath = printTestPath(project_name)
+    for project_data in data_set:
+        project_folder = project_data[project_data.rfind("\\") + 1:]
+        # print(project_folder)
+        # 00joshi_hqapp
+        project_name = str(project) + '/' + project_folder
+        # print(project_name)
+        # 1234/00joshi_hqapp
+        PPath = printProductionPath(project_name)
+        TPath = printTestPath(project_name)
 
      
-    #     num_projects = int(len(PPath))
-    #     if len(PPath) != 0 and len(TPath) != 0:
-    #         # print(project_folder)
-    #         for num in range(num_projects):
+        num_projects = int(len(PPath))
+        if len(PPath) != 0 and len(TPath) != 0:
+            # print(project_folder)
+            for num in range(num_projects):
 
-    #             Productionmethods_list = AstProcessorProduction(None, BasicInfoListener()).execute(PPath[num]) #プロダクションファイル内のメソッド名をすべて取得
-    #             print(PPath[num])
-    #             print(Productionmethods_list)
-    #             ProductionmethodLine_list = AstProcessorProductionLine(None, BasicInfoListener()).execute(PPath[num]) #プロダクションファイル内のメソッド名をすべて取得
-    #             print(ProductionmethodLine_list)
-    #             TestmethodLine_list = AstProcessorTestLine(None, BasicInfoListener()).execute(TPath[num]) #プロダクションファイル内のメソッド名をすべて取得
-    #             print(TestmethodLine_list)
+                Productionmethods_list = AstProcessorProduction(None, BasicInfoListener()).execute(PPath[num]) #プロダクションファイル内のメソッド名をすべて取得
+                print(PPath[num])
+                print(Productionmethods_list)
+                ProductionmethodLine_list = AstProcessorProductionLine(None, BasicInfoListener()).execute(PPath[num]) #プロダクションファイル内のメソッド名をすべて取得
+                print(ProductionmethodLine_list)
+                TestmethodLine_list = AstProcessorTestLine(None, BasicInfoListener()).execute(TPath[num]) #プロダクションファイル内のメソッド名をすべて取得
+                print(TestmethodLine_list)
 
-    #             PPath_last = re.sub(r"D:/ryosuke-ku/data_set/Git_20161108/1234/", "", PPath[num])  # projectX/~/a.java
-    #             TPath_last = re.sub(r"D:/ryosuke-ku/data_set/Git_20161108/1234/", "", TPath[num])  # projectX/~/aTest.java
-    #             print(PPath_last)
-    #             print(TPath_last)
-    #             testDict = testMethodMapCall(TPath[num])
-    #             # print(testDict)
+                PPath_last = re.sub(r"D:/ryosuke-ku/data_set/Git_20161108/1234/", "", PPath[num])  # projectX/~/a.java
+                TPath_last = re.sub(r"D:/ryosuke-ku/data_set/Git_20161108/1234/", "", TPath[num])  # projectX/~/aTest.java
+                print(PPath_last)
+                print(TPath_last)
+                testDict = testMethodMapCall(TPath[num])
+                # print(testDict)
 
 
-    #             file_num = 0
-    #             for ProductionMethod in Productionmethods_list:
-    #                 print(ProductionMethod)
-    #                 rd = rdict(testDict)
-    #                 remethods = rd["^(?=.*" + ProductionMethod + ").*$"]
-    #                 if len(remethods) == 0:
-    #                     pass
-    #                 else:
-    #                     rts = list(set(remethods))
-    #                     startline = int(ProductionmethodLine_list[ProductionMethod][0])-1
-    #                     endline = int(ProductionmethodLine_list[ProductionMethod][1])
+                file_num = 0
+                for ProductionMethod in Productionmethods_list:
+                    print(ProductionMethod)
+                    rd = rdict(testDict)
+                    remethods = rd["^(?=.*" + ProductionMethod + ").*$"]
+                    if len(remethods) == 0:
+                        pass
+                    else:
+                        rts = list(set(remethods))
+                        startline = int(ProductionmethodLine_list[ProductionMethod][0])-1
+                        endline = int(ProductionmethodLine_list[ProductionMethod][1])
 
-    #                     # print('systems/' + PPath_last)
-    #                     # file = open('systems/' + PPath_last,'a') 
-    #                     line_start = int(ProductionmethodLine_list[ProductionMethod][0])-1
-    #                     line_end = int(ProductionmethodLine_list[ProductionMethod][1])
-    #                     # print(PPath[num])
-    #                     f = open(PPath[num], "r", encoding="utf-8")
-    #                     lines = f.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
-    #                     f.close()
-    #                     path_dir = PPath_last[:PPath_last.rfind('/')+1]
-    #                     file_name = PPath_last[PPath_last.rfind('/')+1:][:PPath_last[PPath_last.rfind('/')+1:].rfind('.')]
-    #                     # print('path_dir:' + path_dir)
-    #                     # print('file_name:' + file_name)
-    #                     os.makedirs('systems/' + path_dir, exist_ok=True)
-    #                     file = open('systems/' + path_dir + file_name + '_' + str(file_num) + '.java', "w")
+                        # print('systems/' + PPath_last)
+                        # file = open('systems/' + PPath_last,'a') 
+                        line_start = int(ProductionmethodLine_list[ProductionMethod][0])-1
+                        line_end = int(ProductionmethodLine_list[ProductionMethod][1])
+                        # print(PPath[num])
+                        f = open(PPath[num], "r", encoding="utf-8")
+                        lines = f.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
+                        f.close()
+                        path_dir = PPath_last[:PPath_last.rfind('/')+1]
+                        file_name = PPath_last[PPath_last.rfind('/')+1:][:PPath_last[PPath_last.rfind('/')+1:].rfind('.')]
+                        # print('path_dir:' + path_dir)
+                        # print('file_name:' + file_name)
+                        os.makedirs('systems/' + path_dir, exist_ok=True)
+                        file = open('systems/' + path_dir + file_name + '_' + str(file_num) + '.java', "w")
                         
-    #                     for line in range(len(lines)):
-    #                         file.write('\n')
+                        for line in range(len(lines)):
+                            file.write('\n')
 
-    #                     file.close()
-    #                     file = open('systems/' + path_dir + file_name + '_' + str(file_num) + '.java', "r", encoding="utf-8")
-    #                     file_lines = file.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
+                        file.close()
+                        file = open('systems/' + path_dir + file_name + '_' + str(file_num) + '.java', "r", encoding="utf-8")
+                        file_lines = file.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
 
-    #                     for row in range(len(file_lines)):
-    #                         # print(row)
-    #                         if row >= startline and row <= endline:
-    #                             file_lines[row] = lines[row].replace('\n', '') + '\n'
-    #                     file.close()
-    #                     # print(file_lines)
+                        for row in range(len(file_lines)):
+                            # print(row)
+                            if row >= startline and row <= endline:
+                                file_lines[row] = lines[row].replace('\n', '') + '\n'
+                        file.close()
+                        # print(file_lines)
 
-    #                     with open('systems/' + path_dir + file_name + '_' + str(file_num) + '.java', 'w', encoding="utf-8") as f:
-    #                         for file_line in file_lines:
-    #                             f.write(file_line)
+                        with open('systems/' + path_dir + file_name + '_' + str(file_num) + '.java', 'w', encoding="utf-8") as f:
+                            for file_line in file_lines:
+                                f.write(file_line)
                         
-    #                     file_num += 1
+                        file_num += 1
 
 
-    #                     for rt in rts:
+                        for rt in rts:
 
-    #                         startline_test = int(TestmethodLine_list[rt][0])-1
-    #                         endline_test = int(TestmethodLine_list[rt][1])
+                            startline_test = int(TestmethodLine_list[rt][0])-1
+                            endline_test = int(TestmethodLine_list[rt][1])
 
-    #                         post = {
-    #                             'path': PPath_last,
-    #                             'startline1': startline,
-    #                             'endline1': endline,
-    #                             'testpath': TPath_last,
-    #                             'startline2': startline_test,
-    #                             'endline2': endline_test,
-    #                         }
-    #                         db.testList.insert_one(post)  
+                            post = {
+                                'path': PPath_last,
+                                'startline1': startline,
+                                'endline1': endline,
+                                'testpath': TPath_last,
+                                'startline2': startline_test,
+                                'endline2': endline_test,
+                            }
+                            db.testList.insert_one(post)  
 
        
