@@ -107,18 +107,20 @@ if __name__ == '__main__':
     # print(ProductionmethodLine_list)
     # print(len(ProductionmethodLine_list))
 
-    # y = 'D:/ryosuke-ku/data_set/Git_20161108/0123/0xCopy_RelaxFactory/RelaxFactory/rxf-couch/src/test/java/rxf/couch/Rfc822HeaderStateTest.java'
+    y = 'D:/ryosuke-ku/data_set/Git_20161108/0123/0xCopy_RelaxFactory/RelaxFactory/rxf-couch/src/test/java/rxf/couch/Rfc822HeaderStateTest.java'
     # TestmethodLine_list = AstProcessorTestLine(None, BasicInfoListener()).execute(y) #プロダクションファイル内のメソッド名をすべて取得
     # print(TestmethodLine_list)
 
-    # Testmethodcalls_list = AstProcessorTestMethodCall(None, BasicInfoListener()).execute(y) #target_file_path(テストファイル)内のメソッド名をすべて取得
-    # print(Testmethodcalls_list)
+    Testmethodcalls_list = AstProcessorTestMethodCall(None, BasicInfoListener()).execute(y) #target_file_path(テストファイル)内のメソッド名をすべて取得
+    print(Testmethodcalls_list)
 
     # testDict = testMethodMapCall(y)
     # print(testDict)
     # rd = rdict(testDict)
     # print(remethods)
 
+    clint = MongoClient()
+    db = clint['testMapList']
 
     project = '0123'
     data_set = glob.glob('D:\\ryosuke-ku\\data_set\\Git_20161108\\' + project + '\\*')
@@ -197,6 +199,9 @@ if __name__ == '__main__':
                         pass
                     else:
                         for rt in rts:
+                            print('rt : ' + rt)
+                            TMethod = rt[:rt.find('_')]
+                            print('TMethod : ' + TMethod)
                             PMethod_words = []
                             reuseTestMethods = []
                             for PMethod_devide in re.split('([a-z]+)([A-Z][a-z]+)|([A-Z][a-z]+)', PMethod):
@@ -207,15 +212,27 @@ if __name__ == '__main__':
                             
                             for PMethod_word in PMethod_words:
                                 # print(PMethod_word.lower())
-                                if PMethod_word.lower() in rt.lower():
+                                if PMethod_word.lower() in TMethod.lower():
                                     # reuseTestMethods.append(rt)
 
                                     reuseTestCases = list(set(reuseTestMethods))
                                     print('Production Method:' + ProductionMethod + ' , ' + 'Test Method:' + rt)
 
+                                    startline_test = int(TestmethodLine_list[rt][0])-1
+                                    endline_test = int(TestmethodLine_list[rt][1])
+
+                                    post = {
+                                        'path': PPath_last,
+                                        'startline1': startline,
+                                        'endline1': endline,
+                                        'testpath': TPath_last,
+                                        'startline2': startline_test,
+                                        'endline2': endline_test,
+                                    }
+                                    db.testMap_0123.insert_one(post)  
                             
                                     file_num += 1
-                            # print(reuseTestCases)
+
 
 
 
