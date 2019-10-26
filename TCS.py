@@ -6,7 +6,7 @@ from collections import defaultdict
 import collections
 
 inputcode = []
-file = open('NICAD/projects/utility/a.java', 'w')
+file = open('NICAD/projects/systems/a.java', 'w')
 print('↓ Input Code ↓')
 while True:
     x = input()
@@ -19,7 +19,7 @@ file.close()
 for low in inputcode:
     print(low)
 
-project_list = ['utility']
+project_list = ['systems']
 # for i in project_list:
 #     file = open('NICAD/projects/' + i +'/a.java', 'w')
 #     file.write(x)
