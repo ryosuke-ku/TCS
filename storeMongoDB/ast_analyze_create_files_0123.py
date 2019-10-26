@@ -107,11 +107,18 @@ if __name__ == '__main__':
     # print(ProductionmethodLine_list)
     # print(len(ProductionmethodLine_list))
 
-    y = 'D:/ryosuke-ku/data_set/Git_20161108/0123/0xCopy_RelaxFactory/RelaxFactory/rxf-couch/src/test/java/rxf/couch/Rfc822HeaderStateTest.java'
+
+    # y = 'C:/Users/ryosuke-ku/Desktop/TCS/NICAD/projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-core/src/main/java/rxf/core/Rfc822headerstate.java'
+    # y2 = 'D:/ryosuke-ku/data_set/Git_20161108/0123/0xCopy_RelaxFactory/RelaxFactory/rxf-core/src/main/java/rxf/core/Rfc822headerstate.java'
+    # Productionmethods_list = AstProcessorProduction(None, BasicInfoListener()).execute(y) #プロダクションファイル内のメソッド名をすべて取得
+    # print(Productionmethods_list)
+    # print(len(Productionmethods_list))
+
+
     # TestmethodLine_list = AstProcessorTestLine(None, BasicInfoListener()).execute(y) #プロダクションファイル内のメソッド名をすべて取得
     # print(TestmethodLine_list)
 
-    Testmethodcalls_list = AstProcessorTestMethodCall(None, BasicInfoListener()).execute(y) #target_file_path(テストファイル)内のメソッド名をすべて取得
+    # Testmethodcalls_list = AstProcessorTestMethodCall(None, BasicInfoListener()).execute(y2) #target_file_path(テストファイル)内のメソッド名をすべて取得
     # print(Testmethodcalls_list)
 
     # testDict = testMethodMapCall(y)
@@ -154,6 +161,8 @@ if __name__ == '__main__':
 
                 PPath_last = re.sub(r"D:/ryosuke-ku/data_set/Git_20161108/0123/", "", PPath[num_path])  # projectX/~/a.java
                 TPath_last = re.sub(r"D:/ryosuke-ku/data_set/Git_20161108/0123/", "", TPath[num_path])  # projectX/~/aTest.java
+                print(PPath_last)
+                print(TPath_last)
         
                 testDict = testMethodMapCall(TPath[num_path])
                 # print(testDict)
@@ -161,9 +170,29 @@ if __name__ == '__main__':
 
                 # print(Productionmethods_list)
 
-                file_num = 0
+                path_dir = PPath_last[:PPath_last.rfind('/')+1]
+                file_name = PPath_last[PPath_last.rfind('/')+1:][:PPath_last[PPath_last.rfind('/')+1:].rfind('.')]
+
+                f = open(PPath[num_path], "r", encoding="utf-8")
+                lines = f.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
+                f.close()
+
+                os.makedirs('systems/' + path_dir, exist_ok=True)
+                file = open('systems/' + path_dir + file_name + '.java', "w")
+
+                for line in range(len(lines)):
+                    if line == 0:
+                        file.write('public class ' + file_name.capitalize() + ' {\n')
+                    elif line == len(lines)-1:
+                        file.write('}\n')
+                    else:
+                        file.write('\n')
+
+                file.close()
+
+                nort = 0
                 for ProductionMethod in Productionmethods_list:
-                    # print(ProductionMethod)
+                    print(ProductionMethod)
                     startline = int(ProductionmethodLine_list[ProductionMethod][0])-1
                     endline = int(ProductionmethodLine_list[ProductionMethod][1])
                     # print('start: ' + str(startline) + ' end: ' + str(endline))
@@ -173,30 +202,15 @@ if __name__ == '__main__':
                     # PPath_last = re.sub(r"D:/ryosuke-ku/data_set/Git_20161108/0123/", "", PPath[num_path])  # projectX/~/a.java
                     # TPath_last = re.sub(r"D:/ryosuke-ku/data_set/Git_20161108/0123/", "", TPath[num_path])  # projectX/~/aTest.java
  
-                    path_dir = PPath_last[:PPath_last.rfind('/')+1]
-                    file_name = PPath_last[PPath_last.rfind('/')+1:][:PPath_last[PPath_last.rfind('/')+1:].rfind('.')]
-
-                    f = open(PPath[num_path], "r", encoding="utf-8")
-                    lines = f.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
-                    f.close()
-
                     remethods = rd["^(?=.*" + PMethod + ").*$"]
                     rts = list(set(remethods))
+                    print(rts)
+                    
                     if len(remethods) == 0:
-                        pass
+                        nort += 1
+
                     else:
 
-                        os.makedirs('systems/' + path_dir, exist_ok=True)
-                        file = open('systems/' + path_dir + file_name + '.java', "w")
-
-                        print(str(startline) + '_' + str(endline) + ':' + 'systems/' + path_dir + file_name + '.java')
-                        for line in range(len(lines)):
-                            if line == 0:
-                                file.write('public class ' + file_name.capitalize() + '{\n')
-                            else:
-                                file.write('\n')
-
-                        file.close()
                         file = open('systems/' + path_dir + file_name + '.java', "r", encoding="utf-8")
                         file_lines = file.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
 
@@ -211,8 +225,6 @@ if __name__ == '__main__':
                             for file_line in file_lines:
                                 f.write(file_line) 
 
-                        file_num += 1
-
                         for rt in rts:
                             startline_test = int(TestmethodLine_list[rt][0])-1
                             endline_test = int(TestmethodLine_list[rt][1])
@@ -226,6 +238,10 @@ if __name__ == '__main__':
                                 'endline2': endline_test,
                             }
                             db.testMap_0123.insert_one(post)  
+
+                    if nort == len(Productionmethods_list):
+                        os.remove('systems/' + path_dir + file_name + '.java')
+
                     
                      
 
