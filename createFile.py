@@ -44,7 +44,7 @@ if __name__ == '__main__':
         print(len(lines))
         utility_cut = re.sub(r"C:\\Users\\ryosuke-ku\\Desktop\\utility\\", "", utility_path)
         utility_dir = utility_cut[:utility_cut.rfind('\\')]
-
+        
         print(utility_dir)
         os.makedirs('systems\\' + utility_dir, exist_ok=True)
         file = open('systems\\' + utility_cut,'w')
