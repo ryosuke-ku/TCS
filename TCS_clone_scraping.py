@@ -23,7 +23,7 @@ def writeHtml():
     
 
 #url
-url = "file:///C:/Users/ryosuke-ku/Desktop/TCS/NICAD/projects/utility_functions-blind-clones/utility_functions-blind-clones-0.30-classes-withsource.html"
+url = "file:///C:/Users/ryosuke-ku/Desktop/TCS/NICAD/projects/systems_functions-blind-clones/systems_functions-blind-clones-0.30-classes-withsource.html"
 
 #get html
 html = request.urlopen(url)
@@ -32,7 +32,7 @@ html = request.urlopen(url)
 soup = BeautifulSoup(html, "html.parser")
 
 clint = MongoClient()
-db = clint['newDataBase']
+db = clint['testList']
 
 codeArray = []
 codePathArray = []
@@ -49,7 +49,7 @@ for item in tableCode.find_all('td'):
         codeInfoArray.append(srccode.text)
         item.find('pre').decompose()
         item_edited = item.text.replace('\n','')
-        item_cut_edited = re.sub(r"Lines.*?projects/utility/", "", item_edited)
+        item_cut_edited = re.sub(r"Lines.*?projects/systems/", "", item_edited)
         codeInfoArray.append(item_cut_edited)
 
         codePath_cutFront = re.sub(r"Lines ", "", item_edited)
@@ -57,14 +57,14 @@ for item in tableCode.find_all('td'):
         codePath_cutEnd = codePath_cutFront[:num]
         codePath_rmSpace = codePath_cutEnd.replace(' ','')
         num_hyphen = codePath_rmSpace.find('-')
-        startLine = str(codePath_rmSpace[:num_hyphen])
-        endLine = str(codePath_rmSpace[num_hyphen+1:])
+        startLine = int(codePath_rmSpace[:num_hyphen])-1
+        endLine = int(codePath_rmSpace[num_hyphen+1:])
         codeInfoArray.append(startLine)
         codeInfoArray.append(endLine)
 
     codePathDict[item_cut_edited] = codeInfoArray
 
-# print(codePathDict)
+print(codePathDict)
 
 file = open('TCS_result.html','w')
 writeHtml()
@@ -103,13 +103,14 @@ for key_path in codePathDict:
         file.write('</TR>\n')
         file.write('</TABLE>\n')
 
-        items = db.testList.find({'startline1':codePathDict[key_path][2],'endline1':codePathDict[key_path][3]})
+        items = db.testList.find({'startline1':int(codePathDict[key_path][2]),'endline1':int(codePathDict[key_path][3])})
         
         for item in items:
             testline_start = int(item['startline2'])
             testine_end = int(item['endline2'])
             testpath = item['testpath']
-            testpath_full = 'D:\\ryosuke-ku\\data_set\\Git_20161108\\ABCD\\' + testpath
+            # print(testpath)
+            testpath_full = 'D:\\ryosuke-ku\\data_set\\Git_20161108\\utility\\' + testpath
             f = open(testpath_full, "r", encoding="utf-8")
             lines_origin = f.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
             f.close()
@@ -132,7 +133,7 @@ for key_path in codePathDict:
 
     number += 1
 
-# shutil.rmtree("C:Users\\ryosuke-ku\\Desktop\\TCS\\NICAD\\projects\\utility_functions-blind-clones")
+# shutil.rmtree("C:Users\\ryosuke-ku\\Desktop\\TCS\\NICAD\\projects\\systems_functions-blind-clones")
 NICAD_functionPath_xml = glob.glob('C:\\Users\\ryosuke-ku\\Desktop\\TCS\\NICAD\\projects\\*.xml', recursive=True)
 for functionPath_xml in NICAD_functionPath_xml:
     os.remove(functionPath_xml)
