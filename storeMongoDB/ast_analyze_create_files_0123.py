@@ -107,7 +107,6 @@ if __name__ == '__main__':
     # print(ProductionmethodLine_list)
     # print(len(ProductionmethodLine_list))
 
-<<<<<<< HEAD
 
     # y = 'C:/Users/ryosuke-ku/Desktop/TCS/NICAD/projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-core/src/main/java/rxf/core/Rfc822headerstate.java'
     # y2 = 'D:/ryosuke-ku/data_set/Git_20161108/0123/0xCopy_RelaxFactory/RelaxFactory/rxf-core/src/main/java/rxf/core/Rfc822headerstate.java'
@@ -121,21 +120,12 @@ if __name__ == '__main__':
 
     # Testmethodcalls_list = AstProcessorTestMethodCall(None, BasicInfoListener()).execute(y2) #target_file_path(テストファイル)内のメソッド名をすべて取得
     # print(Testmethodcalls_list)
-=======
-    y = 'D:/ryosuke-ku/data_set/Git_20161108/0123/0xCopy_RelaxFactory/RelaxFactory/rxf-couch/src/test/java/rxf/couch/Rfc822HeaderStateTest.java'
-    # TestmethodLine_list = AstProcessorTestLine(None, BasicInfoListener()).execute(y) #プロダクションファイル内のメソッド名をすべて取得
-    # print(TestmethodLine_list)
-
-    Testmethodcalls_list = AstProcessorTestMethodCall(None, BasicInfoListener()).execute(y) #target_file_path(テストファイル)内のメソッド名をすべて取得
-    print(Testmethodcalls_list)
->>>>>>> 3951902f994bb078ade3d0e95e32df505ab0deaa
 
     # testDict = testMethodMapCall(y)
     # print(testDict)
     # rd = rdict(testDict)
     # print(remethods)
 
-<<<<<<< HEAD
     # z = 'C:/Users/ryosuke-ku/Desktop/TCS/NICAD/projects/systems/NICAD_ant/Nicad_t1_ant1.java'
 
     # ProductionmethodLine_list = AstProcessorProductionLine(None, BasicInfoListener()).execute(z) #プロダクションファイル内のメソッド名をすべて取得
@@ -143,8 +133,6 @@ if __name__ == '__main__':
     # print(len(ProductionmethodLine_list))
 
 
-=======
->>>>>>> 3951902f994bb078ade3d0e95e32df505ab0deaa
     clint = MongoClient()
     db = clint['testMapList']
 
@@ -250,18 +238,12 @@ if __name__ == '__main__':
                                 'endline2': endline_test,
                             }
                             db.testMap_0123.insert_one(post)  
-<<<<<<< HEAD
 
                     if nort == len(Productionmethods_list):
                         os.remove('systems/' + path_dir + file_name + '.java')
 
                     
                      
-=======
-                    
-                            file_num += 1
-
->>>>>>> 3951902f994bb078ade3d0e95e32df505ab0deaa
 
 
 
