@@ -34,6 +34,8 @@ class BasicInfoListener(JavaParserListener):
         c2 = ctx.getChild(1).getText()  # ---> method name
         # c3 = ctx.getChild(2).getText()  # ---> params
         # params = self.parse_method_params_block(ctx.getChild(2))
+        c3 = ctx.getChild(1).getText()  # ---> method name
+        c4 = c3 + '_' + startLine + '_' +endLine
 
         method_info = {
             # 'returnType': c1,
@@ -42,12 +44,13 @@ class BasicInfoListener(JavaParserListener):
             'callMethods': self.call_methods
         }
         self.ast_info['methods'].append(method_info)
-        self.called_methods[c2].append(self.call_methods)
-        self.methods.append(c2)
-        self.methodLine[c2] = lineList
+        self.called_methods[c4] = self.call_methods
+        self.methods.append(c4)
+        self.methodLine[c4] = lineList
 
     def enterMethodCall(self, ctx:JavaParser.MethodCallContext):
         cmName = ctx.parentCtx.getText()
+ 
         if 'assert' in ctx.parentCtx.getText():
             pass
         else:
@@ -58,6 +61,6 @@ class BasicInfoListener(JavaParserListener):
             # fincmName = editcmName[:b]
             # print(fincmName)
             # self.call_methods.append(fincmName)
-            self.call_methods.append(cmName)
+            self.call_methods.append(cmName + '_' + str(ctx.start.line))
 
 
