@@ -7,6 +7,20 @@ import glob
 import os
 from collections import defaultdict
 
+class rdict(dict):
+    def __getitem__(self, key):
+        try:
+            return super(rdict, self).__getitem__(key)
+        except:
+            try:
+                ret=[]
+                for i in self.keys():
+                    m= re.match("^"+key+"$",i)
+                    if m:ret.append( super(rdict, self).__getitem__(m.group(0)) )
+            except:raise(KeyError(key))
+        return ret
+
+
 def writeHtml():
     file.write('<html>\n')
     file.write('<head>\n')
@@ -39,48 +53,50 @@ codePathArray = []
 
 startLine = []
 stopLine = []
-codePathDict = defaultdict(list)
-
-codePathClass = defaultdict(list)
-srcCodeClass = defaultdict(list)
 
 bodyCode = soup.find('body')
 
-
 # クローンクラス<h3>の配列を作成し,類似コードが存在するファイルパス<td>を要素として配列に格納する処理
-for item in bodyCode.find_all(['h3', 'td']):
-    srcCodeArray = []
+
+codePathArray = []
+pathToClassDict = defaultdict(list)
+classToPathsDict = defaultdict(list)
+pathToFragmentDict = defaultdict(list)
+
+for item in bodyCode.find_all(['h3', 'table']):
+    # print(item)
+    # print('-----------------------------------------------------')
+    pathArray = []
     if item.name == 'h3':
-        key = item.text.replace('\n','').replace('\r','')
-        print(key)
-    if key and item.name == 'td':
-        srccode = item.find('pre')
-        srcCodeArray.append(srccode.text)
-        # print(srccode.text)
+        cloneclass = item.text.replace('\n','').replace('\r','')
+        # print(cloneclass)
 
-        item.find('pre').decompose()
-        path = item.text.replace('\n','').replace('\r','')
-        print(path)
-    
-        codePathClass[path] = key
-        srcCodeClass[key] = srcCodeArray
-  
-# print(codePathClass)
-# for i in codePathClass:
-#     print(i)
-#     print(codePathClass[i])
+    if item.name == 'table':
+        fragmentArray = []      
+        tdInfo = item.find_all('td')
+        for td in tdInfo:
+            fragment  = td.find('pre')
+            fragmentArray.append(fragment.text)
+            # print(fragment)
+            td.find('pre').decompose()
+            path = td.text.replace('\n','').replace('\r','')
+            pathArray.append(path)
+            pathToFragmentDict[path] = fragmentArray[0]
+            # print(pathArray)
+            pathToClassDict[path] = cloneclass
+
+        classToPathsDict[cloneclass] = pathArray
+
+rePathToClassDict = rdict(pathToClassDict)
+classInfo = rePathToClassDict["^(?=.*" + 'projects/systems/a.java' + ").*$"]
+print(classInfo[0])
+print(classToPathsDict[classInfo[0]])
+for i in classToPathsDict[classInfo[0]]:
+    print(pathToFragmentDict[i])
 
 
-# for i in srcCodeClass:
-#     print(i)
-#     # print(srcCodeClass[i]) 
-#     for j in srcCodeClass[i]:
-#         print(j)
 
-print('Class : ' + codePathClass['Lines 1 - 10 of projects/systems/a.java'])
-for src in srcCodeClass[codePathClass['Lines 1 - 10 of projects/systems/a.java']]:
-    print(src)
-# print(srcCodeClass[codePathClass['Lines 1 - 10 of projects/systems/a.java']])
+
 
 
 
