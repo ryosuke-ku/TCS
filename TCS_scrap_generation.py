@@ -65,23 +65,24 @@ for item in bodyCode.find_all(['h3', 'td']):
         codePathClass[path] = key
         srcCodeClass[path] = srcCodeArray
   
-print(codePathClass)
-for i in codePathClass:
-    print(i)
-    print(codePathClass[i])
-    # for j in codePathClass[i]:
-    #     print(j)
+# print(codePathClass)
+# for i in codePathClass:
+#     print(i)
+#     print(codePathClass[i])
 
-# print(srcCodeClass)
+
 # for i in srcCodeClass:
 #     print(i)
+#     # print(srcCodeClass[i]) 
 #     for j in srcCodeClass[i]:
 #         print(j)
 
-# print('Class : ' + codePathClass['Lines 1 - 10 of projects/systems/a.java'])
+print('Class : ' + codePathClass['Lines 1 - 10 of projects/systems/a.java'])
+for src in srcCodeClass['Lines 1 - 10 of projects/systems/a.java']:
+    print(src)
 # print(srcCodeClass[codePathClass['Lines 1 - 10 of projects/systems/a.java']])
 
-# print(srcCodeClass[codePathClass['Lines 1 - 10 of projects/systems/a.java']])
+print(srcCodeClass['Lines 1 - 10 of projects/systems/a.java'])
 
 
 
