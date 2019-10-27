@@ -143,15 +143,15 @@ for key_path in pathInfos:
         file.write('Lines ' + str(pathToCodeInfoDict[key_path][2]) + ' - ' + str(pathToCodeInfoDict[key_path][3]) + ' of ' + pathToCodeInfoDict[key_path][1] + '\n')
         file.write('<pre>\n')
 
-        PPath_origin = 'D:/ryosuke-ku/data_set/Git_20161108/0123/' + pathToCodeInfoDict[key_path][1]
-        f = open(PPath_origin, "r", encoding="utf-8")
-        Plines_origin = f.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
-        f.close()
+        # PPath_origin = 'D:/ryosuke-ku/data_set/Git_20161108/0123/' + pathToCodeInfoDict[key_path][1]
+        # f = open(PPath_origin, "r", encoding="utf-8")
+        # Plines_origin = f.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
+        # f.close()
 
-        for x in range(pathToCodeInfoDict[key_path][2],pathToCodeInfoDict[key_path][3]):
-            file.write(Plines_origin[x].replace('\n', '') + '\n')
+        # for x in range(pathToCodeInfoDict[key_path][2],pathToCodeInfoDict[key_path][3]):
+        #     file.write(Plines_origin[x].replace('\n', '') + '\n')
 
-        # file.write(pathToCodeInfoDict[key_path][0][1:])
+        file.write(pathToCodeInfoDict[key_path][0][1:].replace('\n','') + '\n')
         file.write('</pre>\n')
         file.write('</td>\n')
         file.write('</tr>\n')
