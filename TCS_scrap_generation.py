@@ -68,8 +68,9 @@ for item in bodyCode.find_all(['h3', 'td']):
 print(codePathClass)
 for i in codePathClass:
     print(i)
-    for j in codePathClass[i]:
-        print(j)
+    print(codePathClass[i])
+    # for j in codePathClass[i]:
+    #     print(j)
 
 # print(srcCodeClass)
 # for i in srcCodeClass:
