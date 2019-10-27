@@ -1,0 +1,3 @@
+	byte[] getSignature() {
+		return signature;
+	}

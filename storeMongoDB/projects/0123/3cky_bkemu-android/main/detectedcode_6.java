@@ -1,0 +1,3 @@
+        int getCurrentTrackNumber() {
+            return currentTrackNumber;
+        }

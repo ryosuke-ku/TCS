@@ -1,0 +1,3 @@
+        FloppyDriveSide getCurrentTrackSide() {
+            return currentTrackSide;
+        }
