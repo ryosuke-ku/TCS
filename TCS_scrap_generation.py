@@ -46,7 +46,7 @@ html = request.urlopen(url)
 soup = BeautifulSoup(html, "html.parser")
 
 clint = MongoClient()
-db = clint['testList']
+db = clint['testMapList']
 
 codeArray = []
 codePathArray = []
@@ -62,10 +62,9 @@ codePathArray = []
 pathToClassDict = defaultdict(list)
 classToPathsDict = defaultdict(list)
 pathToFragmentDict = defaultdict(list)
+pathToCodeInfoDict = defaultdict(list)
 
 for item in bodyCode.find_all(['h3', 'table']):
-    # print(item)
-    # print('-----------------------------------------------------')
     pathArray = []
     if item.name == 'h3':
         cloneclass = item.text.replace('\n','').replace('\r','')
@@ -75,12 +74,30 @@ for item in bodyCode.find_all(['h3', 'table']):
         fragmentArray = []      
         tdInfo = item.find_all('td')
         for td in tdInfo:
+            codeInfoArray = []
             fragment  = td.find('pre')
             fragmentArray.append(fragment.text)
-            # print(fragment)
+            codeInfoArray.append(fragmentArray[0])
             td.find('pre').decompose()
             path = td.text.replace('\n','').replace('\r','')
             pathArray.append(path)
+
+            formalPath = re.sub(r"Lines.*?projects/systems/", "", path)
+            codeInfoArray.append(formalPath)
+            # print(formalPath)
+            path_front = re.sub(r"Lines ", "", path)
+            path_line = path_front[:path_front.find('o')]
+            path_rmSpace = path_line.replace(' ','')
+
+            startLine = int(path_rmSpace[:path_rmSpace.find('-')])-1
+            endLine = int(path_rmSpace[path_rmSpace.find('-')+1:])
+            # print(str(startLine) + ':' + str(endLine))
+            codeInfoArray.append(startLine)
+            codeInfoArray.append(endLine)
+            pathToCodeInfoDict[path] = codeInfoArray
+
+            # print(codeInfoArray)
+
             pathToFragmentDict[path] = fragmentArray[0]
             # print(pathArray)
             pathToClassDict[path] = cloneclass
@@ -90,185 +107,94 @@ for item in bodyCode.find_all(['h3', 'table']):
 rePathToClassDict = rdict(pathToClassDict)
 classInfo = rePathToClassDict["^(?=.*" + 'projects/systems/a.java' + ").*$"]
 print(classInfo[0])
-print(classToPathsDict[classInfo[0]])
-for i in classToPathsDict[classInfo[0]]:
-    print(pathToFragmentDict[i])
+pathInfos = classToPathsDict[classInfo[0]]
+print(pathInfos)
 
+rePathToCodeInfoDict = rdict(pathToCodeInfoDict)
 
+print(pathToCodeInfoDict['Lines 1 - 10 of projects/systems/a.java'][0][1:])
 
+file = open('TCS_result.html','w')
+writeHtml()
+clone_num = 1
+for key_path in pathInfos:
+    print(key_path)
+    if key_path != 'Lines 1 - 10 of projects/systems/a.java':
+        print(key_path)
+        file.write('<TABLE BORDER="0">')
+        file.write('<h3>Clone Pairs ' + str(clone_num) +'</h3>\n')
+        file.write('<TR>\n')
+        file.write('<TD>\n')
+        file.write('<table border="1" align="left" cellspacing="0" cellpadding="5" bordercolor="#333333">\n')
+        file.write('<tr>\n')
+        file.write('<td>\n')
+        file.write('Input Code' + '\n')
+        file.write('<pre>\n')
+        file.write(pathToCodeInfoDict['Lines 1 - 10 of projects/systems/a.java'][0][1:].replace('\n','') + '\n')
+        file.write('</pre>\n')
+        file.write('</td>\n')
+        file.write('</tr>\n')
+        file.write('</table>\n')
+        file.write('</TD>\n')
+        file.write('<TD>\n')
+        file.write('<table border="1"  cellspacing="0" cellpadding="5" bordercolor="#333333">\n')
+        file.write('<tr>\n')
+        file.write('<td>\n')
+        file.write('Lines ' + str(pathToCodeInfoDict[key_path][2]) + ' - ' + str(pathToCodeInfoDict[key_path][3]) + ' of ' + pathToCodeInfoDict[key_path][1] + '\n')
+        file.write('<pre>\n')
 
+        PPath_origin = 'D:/ryosuke-ku/data_set/Git_20161108/0123/' + pathToCodeInfoDict[key_path][1]
+        f = open(PPath_origin, "r", encoding="utf-8")
+        Plines_origin = f.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
+        f.close()
 
+        for x in range(pathToCodeInfoDict[key_path][2],pathToCodeInfoDict[key_path][3]):
+            file.write(Plines_origin[x].replace('\n', '') + '\n')
 
+        # file.write(pathToCodeInfoDict[key_path][0][1:])
+        file.write('</pre>\n')
+        file.write('</td>\n')
+        file.write('</tr>\n')
+        file.write('</table>\n')
+        file.write('</TD>\n')
+        file.write('</TR>\n')
+        file.write('</TABLE>\n')
 
-
-
-
-
-
-
-
-
-
-# bodyCode = soup.find('body')
-# for item in bodyCode.find_all(['h3', 'td']):
-#     # print(item)
-#     if item.name == 'h3':
-#         h3 = item.text.replace('\n','').replace('\r','')
-#         print(h3)
-
-#         td = item.find_all('td')
-#         print(td)
-        # td_line = td.find('pre').decompose()
-        # print(td_line)
-
-    # if h3 and item.name == 'td':
-    #     srccode = item.find('pre')
-    #     print(srccode)
-        # td = item.find('pre').decompose()
-        # print(td)
-
-
-# for h3 in tableCode.find_all('h3'):
-#     print(h3)
-#     for table in tableCode.find_all('table'):
-#         for td in table.find_all('td'):
-#             print(td)
-#             td_line = td.find('pre').decompose()
-#             print(td_line)
-    
-
-
-# num = 1
-# for item in tableCode.find_all('table'):
-#     print('table : ' + str(num))
-#     num += 1
-#     for td in item.find_all('td'):
-#         print(td)
-#         print('------------------------------------------------------------------')
-    # print(item.find('td'))
-    # print('-------------------------------------------------------------------------------------')
-    # codeInfoArray = []
-    # if item.name == 'td':
-    #     srccode = item.find('pre')
-    #     print(srccode)
-    #     # codeInfoArray.append(srccode.text)
-    #     item.find('pre').decompose()
-    #     item_edited = item.text.replace('\n','')
-    #     item_cut_edited = re.sub(r"Lines.*?projects/systems/", "", item_edited)
-    #     # codeInfoArray.append(item_cut_edited)
-
-    #     print(item_cut_edited)
-        # codePath_cutFront = re.sub(r"Lines ", "", item_edited)
-        # num = codePath_cutFront.find('o')
-        # codePath_cutEnd = codePath_cutFront[:num]
-        # codePath_rmSpace = codePath_cutEnd.replace(' ','')
-        # num_hyphen = codePath_rmSpace.find('-')
-        # startLine = int(codePath_rmSpace[:num_hyphen])-1
-        # endLine = int(codePath_rmSpace[num_hyphen+1:])
-        # codeInfoArray.append(startLine)
-        # codeInfoArray.append(endLine)
-
-#     codePathDict[item_cut_edited] = codeInfoArray
-
-# print(codePathDict)
-
-# tableCode = soup.find('table')
-# for item in tableCode.find_all('td'):
-#     codeInfoArray = []
-#     if item.name == 'td':
-#         srccode = item.find('pre')
-#         codeInfoArray.append(srccode.text)
-#         item.find('pre').decompose()
-#         item_edited = item.text.replace('\n','')
-#         item_cut_edited = re.sub(r"Lines.*?projects/systems/", "", item_edited)
-#         codeInfoArray.append(item_cut_edited)
-
-#         codePath_cutFront = re.sub(r"Lines ", "", item_edited)
-#         num = codePath_cutFront.find('o')
-#         codePath_cutEnd = codePath_cutFront[:num]
-#         codePath_rmSpace = codePath_cutEnd.replace(' ','')
-#         num_hyphen = codePath_rmSpace.find('-')
-#         startLine = int(codePath_rmSpace[:num_hyphen])-1
-#         endLine = int(codePath_rmSpace[num_hyphen+1:])
-#         codeInfoArray.append(startLine)
-#         codeInfoArray.append(endLine)
-
-#     codePathDict[item_cut_edited] = codeInfoArray
-
-# print(codePathDict)
-
-# file = open('TCS_result.html','w')
-# writeHtml()
-# number = 0
-# for key_path in codePathDict:
-#     print(key_path)
-#     if key_path != 'a.java':
-#         print(codePathDict[key_path])
-#         file.write('<TABLE BORDER="0">')
-#         file.write('<h3>Clone Pairs ' + str(number) +'</h3>\n')
-#         file.write('<TR>\n')
-#         file.write('<TD>\n')
-#         file.write('<table border="1" align="left" cellspacing="0" cellpadding="5" bordercolor="#333333">\n')
-#         file.write('<tr>\n')
-#         file.write('<td>\n')
-#         file.write('Input Code' + '\n')
-#         file.write('<pre>\n')
-#         file.write(codePathDict['a.java'][0][1:])
-#         file.write('</pre>\n')
-#         file.write('</td>\n')
-#         file.write('</tr>\n')
-#         file.write('</table>\n')
-#         file.write('</TD>\n')
-#         file.write('<TD>\n')
-#         file.write('<table border="1"  cellspacing="0" cellpadding="5" bordercolor="#333333">\n')
-#         file.write('<tr>\n')
-#         file.write('<td>\n')
-#         file.write(codePathDict[key_path][1] + '\n')
-#         file.write('<pre>\n')
-#         file.write(codePathDict[key_path][0][1:])
-#         file.write('</pre>\n')
-#         file.write('</td>\n')
-#         file.write('</tr>\n')
-#         file.write('</table>\n')
-#         file.write('</TD>\n')
-#         file.write('</TR>\n')
-#         file.write('</TABLE>\n')
-
-#         items = db.testList.find({'startline1':int(codePathDict[key_path][2]),'endline1':int(codePathDict[key_path][3])})
+        items = db.testMap_0123.find({'startline1':int(pathToCodeInfoDict[key_path][2]),'endline1':int(pathToCodeInfoDict[key_path][3])})
         
-#         for item in items:
-#             testline_start = int(item['startline2'])
-#             testine_end = int(item['endline2'])
-#             testpath = item['testpath']
-#             # print(testpath)
-#             testpath_full = 'D:\\ryosuke-ku\\data_set\\Git_20161108\\utility\\' + testpath
-#             f = open(testpath_full, "r", encoding="utf-8")
-#             lines_origin = f.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
-#             f.close()
-#             print(testpath_full)
-#             file.write('<table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">\n')
-#             file.write('<tr>\n')
-#             file.write('<td>\n')
-#             file.write(testpath + '\n')
-#             file.write('<pre>\n')
+        for item in items:
+            testline_start = int(item['startline2'])
+            testine_end = int(item['endline2'])
+            testpath = item['testpath']
+            # print(testpath)
+            testpath_full = 'D:/ryosuke-ku/data_set/Git_20161108/0123/' + testpath
+            f = open(testpath_full, "r", encoding="utf-8")
+            lines_origin = f.readlines() # 1行毎にファイル終端まで全て読む(改行文字も含まれる)
+            f.close()
+            print(testpath_full)
+            file.write('<table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">\n')
+            file.write('<tr>\n')
+            file.write('<td>\n')
+            file.write('Lines ' + str(testline_start) + ' - ' + str(testine_end) + ' of ' + testpath + '\n')
+            file.write('<pre>\n')
 
-#             for x in range(testline_start,testine_end):
-#                 file.write(lines_origin[x].replace('\n', '') + '\n')
+            for x in range(testline_start,testine_end):
+                file.write(lines_origin[x].replace('\n', '') + '\n')
 
-#             # file.write(item['testpath'] + '\n')
-#             file.write('</pre>\n')
-#             file.write('</td>\n')
-#             file.write('</tr>\n')
-#             file.write('</table>\n')
-#             print(item)
+            # file.write(item['testpath'] + '\n')
+            file.write('</pre>\n')
+            file.write('</td>\n')
+            file.write('</tr>\n')
+            file.write('</table>\n')
+            print(item)
 
-#     number += 1
+    clone_num += 1
 
-# # shutil.rmtree("C:Users\\ryosuke-ku\\Desktop\\TCS\\NICAD\\projects\\systems_functions-blind-clones")
-# NICAD_functionPath_xml = glob.glob('C:\\Users\\ryosuke-ku\\Desktop\\TCS\\NICAD\\projects\\*.xml', recursive=True)
-# for functionPath_xml in NICAD_functionPath_xml:
-#     os.remove(functionPath_xml)
+# shutil.rmtree("C:Users\\ryosuke-ku\\Desktop\\TCS\\NICAD\\projects\\systems_functions-blind-clones")
+NICAD_functionPath_xml = glob.glob('C:\\Users\\ryosuke-ku\\Desktop\\TCS\\NICAD\\projects\\*.xml', recursive=True)
+for functionPath_xml in NICAD_functionPath_xml:
+    os.remove(functionPath_xml)
 
-# NICAD_functionPath_log = glob.glob('C:\\Users\\ryosuke-ku\\Desktop\\TCS\\NICAD\\projects\\*.log', recursive=True)
-# for functionPath_log in NICAD_functionPath_log:
-#     os.remove(functionPath_log)
+NICAD_functionPath_log = glob.glob('C:\\Users\\ryosuke-ku\\Desktop\\TCS\\NICAD\\projects\\*.log', recursive=True)
+for functionPath_log in NICAD_functionPath_log:
+    os.remove(functionPath_log)
