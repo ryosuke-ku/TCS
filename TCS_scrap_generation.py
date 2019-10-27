@@ -63,7 +63,7 @@ for item in bodyCode.find_all(['h3', 'td']):
         print(path)
     
         codePathClass[path] = key
-        srcCodeClass[path] = srcCodeArray
+        srcCodeClass[key] = srcCodeArray
   
 # print(codePathClass)
 # for i in codePathClass:
@@ -78,11 +78,10 @@ for item in bodyCode.find_all(['h3', 'td']):
 #         print(j)
 
 print('Class : ' + codePathClass['Lines 1 - 10 of projects/systems/a.java'])
-for src in srcCodeClass['Lines 1 - 10 of projects/systems/a.java']:
+for src in srcCodeClass[codePathClass['Lines 1 - 10 of projects/systems/a.java']]:
     print(src)
 # print(srcCodeClass[codePathClass['Lines 1 - 10 of projects/systems/a.java']])
 
-print(srcCodeClass['Lines 1 - 10 of projects/systems/a.java'])
 
 
 
