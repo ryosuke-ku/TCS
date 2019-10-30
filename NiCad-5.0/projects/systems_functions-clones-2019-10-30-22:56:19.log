@@ -1,0 +1,1191 @@
++ ulimit -s hard
++ lib=.
++ '[' '!' -d . ']'
++ '[' functions '!=' '' ']'
++ granularity=functions
++ shift
++ '[' java '!=' '' ']'
++ language=java
++ shift
++ '[' '!' -d projects/systems ']'
++ '[' '!' -s ./txl/java-extract-functions.txl ']'
++ '[' '!' -x ./txl/java-extract-functions.x ']'
++ system=projects/systems
++ '[' '!' -d projects/systems ']'
++ shift
++ '[' '' '!=' '' ']'
++ select=
++ shift
++ '[' '' '!=' '' ']'
++ ignore=_NO_IGNORE_
++ /bin/rm -rf projects/systems_functions
++ echo -n
++ date
+2019年 10月30日 水曜日 22時56分19秒 JST
++ echo './txl/java-extract-functions.x ALL.java >> projects/systems_functions.xml'
+./txl/java-extract-functions.x ALL.java >> projects/systems_functions.xml
++ result=0
++ IFS='
+'
+++ find projects/systems -type f
+++ grep ''
+++ grep -v _NO_IGNORE_
+++ grep '\.java$'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/4thline_cling/cling/core/src/main/java/org/fourthline/cling/protocol/ProtocolFactory.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/4thline_cling/cling/core/src/main/java/org/fourthline/cling/protocol/ProtocolFactory.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/4thline_cling/cling/core/src/main/java/org/fourthline/cling/model/action/ActionInvocation.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/4thline_cling/cling/core/src/main/java/org/fourthline/cling/model/action/ActionInvocation.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/4thline_cling/cling/core/src/main/java/org/fourthline/cling/model/profile/RemoteClientInfo.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/4thline_cling/cling/core/src/main/java/org/fourthline/cling/model/profile/RemoteClientInfo.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/4thline_cling/cling/core/src/main/java/org/fourthline/cling/model/profile/DeviceDetailsProvider.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/4thline_cling/cling/core/src/main/java/org/fourthline/cling/model/profile/DeviceDetailsProvider.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/4thline_cling/cling/core/src/main/java/org/fourthline/cling/registry/RegistryListener.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/4thline_cling/cling/core/src/main/java/org/fourthline/cling/registry/RegistryListener.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/contentdirectory/DIDLParser.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/contentdirectory/DIDLParser.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/model/PortMapping.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/model/PortMapping.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/model/DIDLObject.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/model/DIDLObject.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/model/AVTransport.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/model/AVTransport.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/lastchange/LastChange.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/lastchange/LastChange.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/serializer/src/com/bj58/spat/gaea/serializer/serializer/Serializer.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/serializer/src/com/bj58/spat/gaea/serializer/serializer/Serializer.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/server/src/core/com/bj58/spat/gaea/server/core/communication/http/RequestMapping.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/server/src/core/com/bj58/spat/gaea/server/core/communication/http/RequestMapping.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/server/src/core/com/bj58/spat/gaea/server/core/convert/JsonConvert.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/server/src/core/com/bj58/spat/gaea/server/core/convert/JsonConvert.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/server/src/bootstrap/com/bj58/spat/gaea/server/bootstrap/Main.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/server/src/bootstrap/com/bj58/spat/gaea/server/bootstrap/Main.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/server/src/util/com/bj58/spat/gaea/server/util/Util.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/server/src/util/com/bj58/spat/gaea/server/util/Util.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/server/src/util/com/bj58/spat/gaea/server/util/IPTable.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/server/src/util/com/bj58/spat/gaea/server/util/IPTable.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/server/src/deploy/com/bj58/spat/gaea/server/deploy/bytecode/CreateManager.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/server/src/deploy/com/bj58/spat/gaea/server/deploy/bytecode/CreateManager.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/server/src/deploy/com/bj58/spat/gaea/server/deploy/bytecode/ScanClass.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/server/src/deploy/com/bj58/spat/gaea/server/deploy/bytecode/ScanClass.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/server/src/deploy/com/bj58/spat/gaea/server/deploy/bytecode/ProxyClassCreater.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/server/src/deploy/com/bj58/spat/gaea/server/deploy/bytecode/ProxyClassCreater.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/server/src/secure/com/bj58/spat/gaea/server/secure/RSAHelper.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/server/src/secure/com/bj58/spat/gaea/server/secure/RSAHelper.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/server/src/secure/com/bj58/spat/gaea/server/secure/DESHelper.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/server/src/secure/com/bj58/spat/gaea/server/secure/DESHelper.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/server/src/performance/com/bj58/spat/gaea/server/performance/Command.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/server/src/performance/com/bj58/spat/gaea/server/performance/Command.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/server/src/performance/com/bj58/spat/gaea/server/performance/commandhelper/Count.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/server/src/performance/com/bj58/spat/gaea/server/performance/commandhelper/Count.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/server/src/performance/com/bj58/spat/gaea/server/performance/commandhelper/Time.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/server/src/performance/com/bj58/spat/gaea/server/performance/commandhelper/Time.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/server/src/performance/com/bj58/spat/gaea/server/performance/commandhelper/Exec.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/server/src/performance/com/bj58/spat/gaea/server/performance/commandhelper/Exec.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/protocol/src/main/java/com/bj58/spat/gaea/protocol/utility/ProtocolHelper.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/protocol/src/main/java/com/bj58/spat/gaea/protocol/utility/ProtocolHelper.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/protocol/src/main/java/com/bj58/spat/gaea/protocol/utility/ByteConverter.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/protocol/src/main/java/com/bj58/spat/gaea/protocol/utility/ByteConverter.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/client/java/client/src/com/bj58/spat/gaea/client/utility/AutoResetEvent.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/client/java/client/src/com/bj58/spat/gaea/client/utility/AutoResetEvent.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/58code_Gaea/Gaea/client/java/client/src/com/bj58/spat/gaea/client/utility/helper/TimeSpanHelper.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/58code_Gaea/Gaea/client/java/client/src/com/bj58/spat/gaea/client/utility/helper/TimeSpanHelper.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/socialfs/SocialFS.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/socialfs/SocialFS.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/ewolf/SocialNetwork.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/ewolf/SocialNetwork.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/server/jsonDataHandlers/InboxFetcher.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/server/jsonDataHandlers/InboxFetcher.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/server/jsonDataHandlers/NewsFeedFetcher.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/server/jsonDataHandlers/NewsFeedFetcher.java
+[projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/server/jsonDataHandlers/NewsFeedFetcher.java, java-extract-functions.txl] : TXL0192E line 122 of projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/server/jsonDataHandlers/NewsFeedFetcher.java - Syntax error at or near:
+	; } } public EWolfResponse >>> handleData <<< ( JsonElement jsonReq ) { 
++ '[' 1 '!=' 0 ']'
++ result=0
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/server/jsonDataHandlers/WolfpackMembersFetcher.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/server/jsonDataHandlers/WolfpackMembersFetcher.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/kbr/KeybasedRouting.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/kbr/KeybasedRouting.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/kbr/openkad/net/MessageDispatcher.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/kbr/openkad/net/MessageDispatcher.java
+[projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/kbr/openkad/net/MessageDispatcher.java, java-extract-functions.txl] : TXL0192E line 174 of projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/kbr/openkad/net/MessageDispatcher.java - Syntax error at or near:
+	; } } ; public >>> void <<< send ( Node to , 
++ '[' 1 '!=' 0 ']'
++ result=0
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/stash/crypto/EncryptedObject.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/stash/crypto/EncryptedObject.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/stash/crypto/Signable.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/stash/crypto/Signable.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/stash/Stash.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/stash/Stash.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/http/HttpConnector.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/http/HttpConnector.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/chunkeeper/ChunKeeper.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/236371_ewolf-webgui/ewolf-webgui/src/il/technion/ewolf/chunkeeper/ChunKeeper.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/DynamicPresentationModel.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/DynamicPresentationModel.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/DefaultMapBeanChangeHandler.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/DefaultMapBeanChangeHandler.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/value/BoundValueModel.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/value/BoundValueModel.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/value/IndexedCollectionValueModel.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/value/IndexedCollectionValueModel.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/value/CollectionValueHolder.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/value/CollectionValueHolder.java
+[projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/value/CollectionValueHolder.java, java-extract-functions.txl] : TXL0192E line 253 of projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/value/CollectionValueHolder.java - Syntax error at or near:
+	) ; } } public >>> void <<< dispose ( ) { ObservableList 
++ '[' 1 '!=' 0 ']'
++ result=0
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/beans/BeanAdapter.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/beans/BeanAdapter.java
+[projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/beans/BeanAdapter.java, java-extract-functions.txl] : TXL0192E line 300 of projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/beans/BeanAdapter.java - Syntax error at or near:
+	null ; } } public >>> void <<< dispose ( ) { beanAdapter 
++ '[' 1 '!=' 0 ']'
++ result=0
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/beans/SimplePropertyAdapter.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/beans/SimplePropertyAdapter.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/beans/support/SwingIdentityPropertyChangeSupport.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/beans/support/SwingIdentityPropertyChangeSupport.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/beans/support/IdentityPropertyChangeSupport.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/beans/support/IdentityPropertyChangeSupport.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/selection/SelectionHolder.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/selection/SelectionHolder.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/DynamicPresentationModelFactoryImpl.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/DynamicPresentationModelFactoryImpl.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/DefaultPresentationModel.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/DefaultPresentationModel.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_binding/binding/src/com/netappsid/undoredo/UndoRedoCollectionValueModel.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_binding/binding/src/com/netappsid/undoredo/UndoRedoCollectionValueModel.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_binding/binding/src/com/netappsid/undoredo/UndoRedoValueModel.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_binding/binding/src/com/netappsid/undoredo/UndoRedoValueModel.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_binding/binding/src/com/netappsid/undoredo/UndoRedoManager.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_binding/binding/src/com/netappsid/undoredo/UndoRedoManager.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/3cky_bkemu-android/bkemu-android/src/su/comp/bk/util/Crc16.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/3cky_bkemu-android/bkemu-android/src/su/comp/bk/util/Crc16.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/3cky_bkemu-android/bkemu-android/src/su/comp/bk/arch/memory/ReadOnlyMemory.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/3cky_bkemu-android/bkemu-android/src/su/comp/bk/arch/memory/ReadOnlyMemory.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/3cky_bkemu-android/bkemu-android/src/su/comp/bk/arch/memory/RandomAccessMemory.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/3cky_bkemu-android/bkemu-android/src/su/comp/bk/arch/memory/RandomAccessMemory.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/3cky_bkemu-android/bkemu-android/src/su/comp/bk/arch/cpu/opcode/ConditionCodeOpcodes.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/3cky_bkemu-android/bkemu-android/src/su/comp/bk/arch/cpu/opcode/ConditionCodeOpcodes.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/3cky_bkemu-android/bkemu-android/src/su/comp/bk/arch/io/Sel1RegisterSystemBits.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/3cky_bkemu-android/bkemu-android/src/su/comp/bk/arch/io/Sel1RegisterSystemBits.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/3cky_bkemu-android/bkemu-android/src/su/comp/bk/arch/io/Timer.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/3cky_bkemu-android/bkemu-android/src/su/comp/bk/arch/io/Timer.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/3cky_bkemu-android/bkemu-android/src/su/comp/bk/arch/io/FloppyController.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/3cky_bkemu-android/bkemu-android/src/su/comp/bk/arch/io/FloppyController.java
+[projects/systems/3cky_bkemu-android/bkemu-android/src/su/comp/bk/arch/io/FloppyController.java, java-extract-functions.txl] : TXL0164E at end of projects/systems/3cky_bkemu-android/bkemu-android/src/su/comp/bk/arch/io/FloppyController.java - Syntax error - comment ends at end of file
++ '[' 1 '!=' 0 ']'
++ result=0
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/3cky_bkemu-android/bkemu-android/src/su/comp/bk/arch/Computer.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/3cky_bkemu-android/bkemu-android/src/su/comp/bk/arch/Computer.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_observable/observable/src/com/netappsid/collection/internal/ListSetIterator.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_observable/observable/src/com/netappsid/collection/internal/ListSetIterator.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_observable/observable/src/com/netappsid/collection/ArrayListSet.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_observable/observable/src/com/netappsid/collection/ArrayListSet.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/ObservableCollections.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/ObservableCollections.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/internal/LazyInitializerList.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/internal/LazyInitializerList.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/internal/ObservableFilteredListIterator.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/internal/ObservableFilteredListIterator.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/ListDifference.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/ListDifference.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/ObservableIterator.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/ObservableIterator.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/ObservableList.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/ObservableList.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/ObservableCollectionSupport.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/ObservableCollectionSupport.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/ClearAndAddAllBatchAction.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/ClearAndAddAllBatchAction.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/ObservableMapDecorator.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/ObservableMapDecorator.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/ObservableListIterator.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/ObservableListIterator.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/ObservableUnsafeFilteredSubList.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/ObservableUnsafeFilteredSubList.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/13leaf_QADDroid/QADDroid/QADDroid/src/com/qad/lang/Strings.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/13leaf_QADDroid/QADDroid/QADDroid/src/com/qad/lang/Strings.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/13leaf_QADDroid/QADDroid/QADDroid/src/com/qad/lang/Files.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/13leaf_QADDroid/QADDroid/QADDroid/src/com/qad/lang/Files.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/42Lines_metagen/metagen/metagen-processor/src/test/java/net/ftlines/metagen/processor/inheritance/basic/C.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/42Lines_metagen/metagen/metagen-processor/src/test/java/net/ftlines/metagen/processor/inheritance/basic/C.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/42Lines_metagen/metagen/metagen-core/src/main/java/net/ftlines/metagen/annot/Ignore.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/42Lines_metagen/metagen/metagen-core/src/main/java/net/ftlines/metagen/annot/Ignore.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/42Lines_metagen/metagen/metagen-core/src/main/java/net/ftlines/metagen/annot/Bean.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/42Lines_metagen/metagen/metagen-core/src/main/java/net/ftlines/metagen/annot/Bean.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/form/fields/BooleanItem.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/form/fields/BooleanItem.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/form/fields/PickerIcon.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/form/fields/PickerIcon.java
+[projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/form/fields/PickerIcon.java, java-extract-functions.txl] : TXL0192E line 59 of projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/form/fields/PickerIcon.java - Syntax error at or near:
+	return url ; } } >>> } <<< 
++ '[' 1 '!=' 0 ']'
++ result=0
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/form/fields/events/FormItemIconClickEvent.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/form/fields/events/FormItemIconClickEvent.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/form/fields/FormItemIcon.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/form/fields/FormItemIcon.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/form/fields/FormItem.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/form/fields/FormItem.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/Window.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/Window.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/core/ComponentList.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/core/ComponentList.java
+[projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/core/ComponentList.java, java-extract-functions.txl] : TXL0192E line 164 of projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/core/ComponentList.java - Syntax error at or near:
+	) ; } } public >>> void <<< paintContent ( PaintTarget target ) 
++ '[' 1 '!=' 0 ']'
++ result=0
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/core/ComponentPropertyPainter.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/core/ComponentPropertyPainter.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/core/ComponentArray.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/core/ComponentArray.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/HTMLPane.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/HTMLPane.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/util/SC.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/util/SC.java
+[projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/util/SC.java, java-extract-functions.txl] : TXL0192E line 84 of projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/util/SC.java - Syntax error at or near:
+	) ; } } public >>> void <<< confirm ( String message , 
++ '[' 1 '!=' 0 ']'
++ result=0
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/util/JSONHelper.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/util/JSONHelper.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/MasterContainer.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/MasterContainer.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/BorderLayout.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/BorderLayout.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/BaseWidget.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/BaseWidget.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/tab/TabSet.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/tab/TabSet.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/extra/HSplitLayout.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/extra/HSplitLayout.java
+[projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/extra/HSplitLayout.java, java-extract-functions.txl] : TXL0192E line 36 of projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/extra/HSplitLayout.java - Syntax error at or near:
+	} } public static Builder >>> buildHSplitLayout <<< ( ) { return new 
++ '[' 1 '!=' 0 ']'
++ result=0
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/extra/Refresher.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/extra/Refresher.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/extra/VSplitLayout.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/extra/VSplitLayout.java
+[projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/extra/VSplitLayout.java, java-extract-functions.txl] : TXL0192E line 36 of projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/extra/VSplitLayout.java - Syntax error at or near:
+	} } public static Builder >>> buildVSplitLayout <<< ( ) { return new 
++ '[' 1 '!=' 0 ']'
++ result=0
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/events/ClickEvent.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/events/ClickEvent.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/HTMLFlow.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/HTMLFlow.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/data/RecordFactory.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/data/RecordFactory.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/data/RecordJSONUpdater.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/data/RecordJSONUpdater.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/builder/DynamicFormBuilder.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/builder/DynamicFormBuilder.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/builder/LabelBuilder.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/builder/LabelBuilder.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/builder/BaseWidgetBuilder.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/builder/BaseWidgetBuilder.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/builder/LayoutBuilder.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/builder/LayoutBuilder.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/builder/HLayoutBuilder.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/builder/HLayoutBuilder.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/builder/VLayoutBuilder.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/builder/VLayoutBuilder.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/builder/BorderLayoutBuilder.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/builder/BorderLayoutBuilder.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/builder/CanvasBuilder.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/builder/CanvasBuilder.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/Canvas.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/Canvas.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/ListGrid.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/ListGrid.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/events/SelectionUpdatedEvent.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/events/SelectionUpdatedEvent.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/events/RecordDoubleClickEvent.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/events/RecordDoubleClickEvent.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/events/SelectionEvent.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/events/SelectionEvent.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/SelectionEventFactory.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/SelectionEventFactory.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/ListGridRecordFactory.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/ListGridRecordFactory.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-core/src/main/java/rxf/core/DateHeaderParser.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-core/src/main/java/rxf/core/DateHeaderParser.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-core/src/main/java/rxf/core/Rfc822HeaderState.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-core/src/main/java/rxf/core/Rfc822HeaderState.java
+[projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-core/src/main/java/rxf/core/Rfc822HeaderState.java, java-extract-functions.txl] : TXL0192E line 341 of projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-core/src/main/java/rxf/core/Rfc822HeaderState.java - Syntax error at or near:
+	; } } public String >>> toString <<< ( ) { return "Rfc822HeaderState:{" 
++ '[' 1 '!=' 0 ']'
++ result=0
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-guice/src/main/java/rxf/couch/guice/CouchServiceProvider.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-guice/src/main/java/rxf/couch/guice/CouchServiceProvider.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-couch/src/main/java/rxf/couch/gen/CouchDriver.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-couch/src/main/java/rxf/couch/gen/CouchDriver.java
+[projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-couch/src/main/java/rxf/couch/gen/CouchDriver.java, java-extract-functions.txl] : TXL0192E line 113 of projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-couch/src/main/java/rxf/couch/gen/CouchDriver.java - Syntax error at or near:
+	; } } public DbDeleteActionBuilder >>> to <<< ( ) { assert 1 
++ '[' 1 '!=' 0 ']'
++ result=0
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-couch/src/main/java/rxf/couch/CouchService.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-couch/src/main/java/rxf/couch/CouchService.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/13leaf_AndroidPackageTool/AndroidPackageTool/src/tools/Files.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/13leaf_AndroidPackageTool/AndroidPackageTool/src/tools/Files.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/1000Memories_photon-core/photon-core/src/main/java/com/thousandmemories/photon/core/PhotoResource.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/1000Memories_photon-core/photon-core/src/main/java/com/thousandmemories/photon/core/PhotoResource.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/a.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/a.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/4thline_seamless/seamless/util/src/main/java/org/seamless/util/Iterators.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/4thline_seamless/seamless/util/src/main/java/org/seamless/util/Iterators.java
+[projects/systems/4thline_seamless/seamless/util/src/main/java/org/seamless/util/Iterators.java, java-extract-functions.txl] : TXL0192E line 43 of projects/systems/4thline_seamless/seamless/util/src/main/java/org/seamless/util/Iterators.java - Syntax error at or near:
+	) ; } } public >>> boolean <<< hasNext ( ) { return 
++ '[' 1 '!=' 0 ']'
++ result=0
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/4thline_seamless/seamless/util/src/main/java/org/seamless/util/URIUtil.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/4thline_seamless/seamless/util/src/main/java/org/seamless/util/URIUtil.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/4thline_seamless/seamless/util/src/main/java/org/seamless/util/MimeType.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/4thline_seamless/seamless/util/src/main/java/org/seamless/util/MimeType.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/4thline_seamless/seamless/http/src/main/java/org/seamless/http/Headers.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/4thline_seamless/seamless/http/src/main/java/org/seamless/http/Headers.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/4thline_seamless/seamless/http/src/main/java/org/seamless/http/Query.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/4thline_seamless/seamless/http/src/main/java/org/seamless/http/Query.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/4thline_seamless/seamless/javadoc/src/main/java/org/seamless/javadoc/EasyDoclet.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/4thline_seamless/seamless/javadoc/src/main/java/org/seamless/javadoc/EasyDoclet.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/50onRed_mock-jedis/mock-jedis/src/main/java/com/fiftyonred/mock_jedis/MockJedisCluster.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/50onRed_mock-jedis/mock-jedis/src/main/java/com/fiftyonred/mock_jedis/MockJedisCluster.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/50onRed_mock-jedis/mock-jedis/src/main/java/com/fiftyonred/mock_jedis/MockJedisPool.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/50onRed_mock-jedis/mock-jedis/src/main/java/com/fiftyonred/mock_jedis/MockJedisPool.java
++ '[' 0 '!=' 0 ']'
++ for i in '`find "${system}" -type f | grep "${select}" | grep -v "${ignore}" | grep "\.${language}"'\''$'\''`'
++ source=projects/systems/50onRed_mock-jedis/mock-jedis/src/main/java/com/fiftyonred/mock_jedis/MockJedis.java
++ '[' java = c ']'
++ '[' java = cs ']'
++ '[' java = py ']'
++ ./txl/java-extract-functions.x projects/systems/50onRed_mock-jedis/mock-jedis/src/main/java/com/fiftyonred/mock_jedis/MockJedis.java
++ '[' 0 '!=' 0 ']'
++ echo ''
+
++ date
+2019年 10月30日 水曜日 22時56分22秒 JST
++ echo ''
+
++ exit 0
+2019年 10月30日 水曜日 22時56分22秒 JST
+./tools/streamprocess.x './txl/java-rename-blind-functions.x stdin' < projects/systems_functions.xml > projects/systems_functions-blind.xml
+
+real	0m0.302s
+user	0m0.137s
+sys	0m0.107s
+
+2019年 10月30日 水曜日 22時56分22秒 JST
+
+2019年 10月30日 水曜日 22時56分22秒 JST
+./tools/clonepairs.x projects/systems_functions-blind.xml 0.30 10 2500 > projects/systems_functions-blind-clones/systems_functions-blind-clones-0.30.xml
+Processing projects/systems_functions-blind.xml with difference threshold 30%, clone size 10 .. 2500 lines
+Reading pcs . done.
+Total 606/7200000 potential clones of 10 lines or more
+Used 2396/120000000 total pc lines
+Used 147091/720000000 unique line text chars
+ and 1835/14400000 unique lines
+Sorting pcs . done.
+Finding clones  done.
+Total 2953 pc comparisons
+Pruning embedded clone pairs .. done.
+Pruned 0 embedded clone pairs
+Found 43 clone pairs
+Generating XML output . done.
+
+
+real	0m0.065s
+user	0m0.025s
+sys	0m0.033s
+
+2019年 10月30日 水曜日 22時56分22秒 JST
+
+2019年 10月30日 水曜日 22時56分22秒 JST
+./tools/cloneclasses.x projects/systems_functions-blind-clones/systems_functions-blind-clones-0.30.xml > projects/systems_functions-blind-clones/systems_functions-blind-clones-0.30-classes.xml
+Processing projects/systems_functions-blind-clones/systems_functions-blind-clones-0.30.xml
+Reading clone pairs . done.
+Total 43 pairs
+Sorting pairs . done.
+Indexing pairs . done.
+Computing classes . done.
+Clustered clone pairs into 10 classes
+Generating XML output . done.
+
+
+real	0m0.083s
+user	0m0.028s
+sys	0m0.047s
+
+2019年 10月30日 水曜日 22時56分22秒 JST
+
+2019年 10月30日 水曜日 22時56分22秒 JST
+./tools/getsource.x projects/systems_functions-blind-clones/systems_functions-blind-clones-0.30-classes.xml projects/systems_functions-blind-clones/systems_functions-blind-clones-0.30-classes-withsource.xml
+projects/systems_functions-blind-clones/systems_functions-blind-clones-0.30-classes.xml
+<clones>
+<systeminfo processor="nicad5" system="systems" granularity="functions-blind" threshold="30%" minlines="10" maxlines="2500"/>
+<cloneinfo npcs="606" npairs="43"/>
+<runinfo ncompares="2953" cputime="51889"/>
+<classinfo nclasses="10"/>
+
+<class classid="1" nclones="3" nlines="17" similarity="70">
+<source file="projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/contentdirectory/DIDLParser.java" startline="841" endline="865" pcid="17"></source>
+<source file="projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/contentdirectory/DIDLParser.java" startline="887" endline="920" pcid="18"></source>
+<source file="projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/contentdirectory/DIDLParser.java" startline="969" endline="989" pcid="19"></source>
+</class>
+
+<class classid="2" nclones="3" nlines="10" similarity="70">
+<source file="projects/systems/58code_Gaea/Gaea/server/src/core/com/bj58/spat/gaea/server/core/convert/JsonConvert.java" startline="44" endline="53" pcid="54"></source>
+<source file="projects/systems/58code_Gaea/Gaea/server/src/core/com/bj58/spat/gaea/server/core/convert/JsonConvert.java" startline="99" endline="108" pcid="63"></source>
+<source file="projects/systems/a.java" startline="1" endline="10" pcid="501"></source>
+</class>
+
+<class classid="3" nclones="3" nlines="10" similarity="90">
+<source file="projects/systems/58code_Gaea/Gaea/server/src/deploy/com/bj58/spat/gaea/server/deploy/bytecode/ScanClass.java" startline="83" endline="93" pcid="76"></source>
+<source file="projects/systems/58code_Gaea/Gaea/server/src/deploy/com/bj58/spat/gaea/server/deploy/bytecode/ScanClass.java" startline="121" endline="131" pcid="78"></source>
+<source file="projects/systems/58code_Gaea/Gaea/server/src/deploy/com/bj58/spat/gaea/server/deploy/bytecode/ScanClass.java" startline="102" endline="112" pcid="77"></source>
+</class>
+
+<class classid="4" nclones="2" nlines="17" similarity="100">
+<source file="projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/beans/support/SwingIdentityPropertyChangeSupport.java" startline="18" endline="42" pcid="173"></source>
+<source file="projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/beans/support/SwingIdentityPropertyChangeSupport.java" startline="45" endline="69" pcid="175"></source>
+</class>
+
+<class classid="5" nclones="2" nlines="12" similarity="100">
+<source file="projects/systems/360-Innovations_binding/binding/src/com/netappsid/undoredo/UndoRedoCollectionValueModel.java" startline="65" endline="82" pcid="188"></source>
+<source file="projects/systems/360-Innovations_binding/binding/src/com/netappsid/undoredo/UndoRedoCollectionValueModel.java" startline="84" endline="105" pcid="189"></source>
+</class>
+
+<class classid="6" nclones="2" nlines="11" similarity="100">
+<source file="projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/internal/ObservableFilteredListIterator.java" startline="20" endline="37" pcid="269"></source>
+<source file="projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/internal/ObservableFilteredListIterator.java" startline="47" endline="64" pcid="271"></source>
+</class>
+
+<class classid="7" nclones="2" nlines="15" similarity="93">
+<source file="projects/systems/13leaf_QADDroid/QADDroid/QADDroid/src/com/qad/lang/Files.java" startline="466" endline="486" pcid="311"></source>
+<source file="projects/systems/13leaf_AndroidPackageTool/AndroidPackageTool/src/tools/Files.java" startline="38" endline="58" pcid="497"></source>
+</class>
+
+<class classid="8" nclones="7" nlines="10" similarity="76">
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/form/fields/FormItemIcon.java" startline="274" endline="282" pcid="323"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/Canvas.java" startline="3579" endline="3587" pcid="440"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/Window.java" startline="1245" endline="1253" pcid="338"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/ListGrid.java" startline="7422" endline="7430" pcid="454"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/ListGrid.java" startline="7392" endline="7400" pcid="448"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/extra/Refresher.java" startline="57" endline="68" pcid="379"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/ListGrid.java" startline="7407" endline="7415" pcid="451"></source>
+</class>
+
+<class classid="9" nclones="5" nlines="11" similarity="75">
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/BorderLayout.java" startline="55" endline="66" pcid="360"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/BorderLayout.java" startline="87" endline="96" pcid="364"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/BorderLayout.java" startline="117" endline="126" pcid="368"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/BorderLayout.java" startline="72" endline="81" pcid="362"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/BorderLayout.java" startline="102" endline="111" pcid="366"></source>
+</class>
+
+<class classid="10" nclones="2" nlines="14" similarity="100">
+<source file="projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-couch/src/main/java/rxf/couch/CouchService.java" startline="73" endline="88" pcid="491"></source>
+<source file="projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-couch/src/main/java/rxf/couch/CouchService.java" startline="100" endline="115" pcid="494"></source>
+</class>
+
+</clones>
+
+real	0m0.027s
+user	0m0.014s
+sys	0m0.007s
+
+2019年 10月30日 水曜日 22時56分22秒 JST
+
++ ulimit -s hard
++ lib=.
++ '[' '!' -d . ']'
++ date
+2019年 10月30日 水曜日 22時56分22秒 JST
++ IFS='
+'
++ for clonesfile in '$*'
++ '[' '!' -f projects/systems_functions-blind-clones/systems_functions-blind-clones-0.30-classes-withsource.xml ']'
++ basename=projects/systems_functions-blind-clones/systems_functions-blind-clones-0.30-classes-withsource
++ echo './tools/tohtmlpairs.x projects/systems_functions-blind-clones/systems_functions-blind-clones-0.30-classes-withsource.xml projects/systems_functions-blind-clones/systems_functions-blind-clones-0.30-classes-withsource.html'
+./tools/tohtmlpairs.x projects/systems_functions-blind-clones/systems_functions-blind-clones-0.30-classes-withsource.xml projects/systems_functions-blind-clones/systems_functions-blind-clones-0.30-classes-withsource.html
++ ./tools/tohtmlpairs.x projects/systems_functions-blind-clones/systems_functions-blind-clones-0.30-classes-withsource.xml projects/systems_functions-blind-clones/systems_functions-blind-clones-0.30-classes-withsource.html
+
+real	0m0.015s
+user	0m0.003s
+sys	0m0.004s
++ result=0
++ '[' 0 '!=' 0 ']'
++ echo ''
+
++ date
+2019年 10月30日 水曜日 22時56分22秒 JST
++ echo ''
+
++ exit 0

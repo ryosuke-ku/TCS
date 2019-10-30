@@ -1,0 +1,681 @@
+<html>
+<head>
+<style type="text/css">
+body {font-family:Arial}
+table {background-color:white; border:0px solid white; width:95%; margin-left:auto; margin-right: auto}
+td {background-color:#b0c4de; padding:16px; border:4px solid white}
+pre {background-color:white; padding:4px}
+</style>
+<title>
+NiCad Clone Report
+</title>
+</head>
+<body>
+<h2>
+NiCad Clone Report
+</h2>
+System: systems
+<br>
+<br>Granularity: functions-blind
+<br>Max difference threshold: 30%
+<br>Clone size: 10 - 2500 lines
+<br>
+<br>Total functions-blind: 606
+<br>Clone pairs found: 43
+<br>
+<br>LCS compares: 2953 &nbsp;&nbsp;&nbsp; CPU time: 0 min 0.51 sec
+<br>
+<br>Number of  classes: 10
+<br>
+<h3>Clone class 1, 3 fragments, nominal size 17 lines, similarity 70%
+</h3>
+<table cellpadding=12 border=2 frame="box" width="90%">
+<tr><td>
+Lines 841 - 865 of projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/contentdirectory/DIDLParser.java
+<pre>
+        public void startElement(String uri, String localName, String qName, Attributes attributes)             super.startElement(uri, localName, qName, attributes);
+
+            if (!DIDLContent.NAMESPACE_URI.equals(uri)) return;
+
+            if (localName.equals("container")) {
+
+                Container container = createContainer(attributes);
+                getInstance().addContainer(container);
+                createContainerHandler(container, this);
+
+            } else if (localName.equals("item")) {
+
+                Item item = createItem(attributes);
+                getInstance().addItem(item);
+                createItemHandler(item, this);
+
+            } else if (localName.equals("desc")) {
+
+                DescMeta desc = createDescMeta(attributes);
+                getInstance().addDescMetadata(desc);
+                createDescMetaHandler(desc, this);
+
+            }
+        }
+</pre>
+</td></tr>
+<tr><td>
+Lines 887 - 920 of projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/contentdirectory/DIDLParser.java
+<pre>
+        public void startElement(String uri, String localName, String qName, Attributes attributes)             super.startElement(uri, localName, qName, attributes);
+
+            if (!DIDLContent.NAMESPACE_URI.equals(uri)) return;
+
+            if (localName.equals("item")) {
+
+                Item item = createItem(attributes);
+                getInstance().addItem(item);
+                createItemHandler(item, this);
+
+            } else if (localName.equals("desc")) {
+
+                DescMeta desc = createDescMeta(attributes);
+                getInstance().addDescMetadata(desc);
+                createDescMetaHandler(desc, this);
+
+            } else if (localName.equals("res")) {
+
+                Res res = createResource(attributes);
+                if (res != null) {
+                    getInstance().addResource(res);
+                    createResHandler(res, this);
+                }
+
+            }
+
+            // We do NOT support recursive container embedded in container! The schema allows it
+            // but the spec doesn't:
+            //
+            // Section 2.8.3: Incremental navigation i.e. the full hierarchy is never returned
+            // in one call since this is likely to flood the resources available to the control
+            // point (memory, network bandwidth, etc.).
+        }
+</pre>
+</td></tr>
+<tr><td>
+Lines 969 - 989 of projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/contentdirectory/DIDLParser.java
+<pre>
+        public void startElement(String uri, String localName, String qName, Attributes attributes)             super.startElement(uri, localName, qName, attributes);
+
+            if (!DIDLContent.NAMESPACE_URI.equals(uri)) return;
+
+            if (localName.equals("res")) {
+
+                Res res = createResource(attributes);
+                if (res != null) {
+                    getInstance().addResource(res);
+                    createResHandler(res, this);
+                }
+
+            } else if (localName.equals("desc")) {
+
+                DescMeta desc = createDescMeta(attributes);
+                getInstance().addDescMetadata(desc);
+                createDescMetaHandler(desc, this);
+
+            }
+        }
+</pre>
+</td></tr>
+</table>
+<h3>Clone class 2, 3 fragments, nominal size 10 lines, similarity 70%
+</h3>
+<table cellpadding=12 border=2 frame="box" width="90%">
+<tr><td>
+Lines 44 - 53 of projects/systems/58code_Gaea/Gaea/server/src/core/com/bj58/spat/gaea/server/core/convert/JsonConvert.java
+<pre>
+	public Character convertToCharacter(Object obj) {
+		String str = obj.toString();
+		if(str.length() &gt; 1) {
+			str = str.replaceFirst("\"", "");
+		}
+		if(!str.equals(null) &amp;&amp; !str.equals("")){
+			return new Character(str.charAt(0));
+		}
+		return new Character('\0');
+	}
+</pre>
+</td></tr>
+<tr><td>
+Lines 99 - 108 of projects/systems/58code_Gaea/Gaea/server/src/core/com/bj58/spat/gaea/server/core/convert/JsonConvert.java
+<pre>
+	public char convertTochar(Object obj) {
+		String str = obj.toString();
+		if(str.length() &gt; 1) {
+			str = str.replaceFirst("\"", "");
+		}
+		if(!str.equals(null) &amp;&amp; !str.equals("")){
+			return str.charAt(0);
+		}
+		return '\0';
+	}
+</pre>
+</td></tr>
+<tr><td>
+Lines 1 - 10 of projects/systems/a.java
+<pre>
+	public Character convertToCharacter(Object obj) {
+		String str = obj.toString();
+		if(str.length() &gt; 1) {
+			str = str.replaceFirst("\"", "");
+		}
+		if(!str.equals(null) &amp;&amp; !str.equals("")){
+			return new Character(str.charAt(0));
+		}
+		return new Character('\0');
+	}
+</pre>
+</td></tr>
+</table>
+<h3>Clone class 3, 3 fragments, nominal size 10 lines, similarity 90%
+</h3>
+<table cellpadding=12 border=2 frame="box" width="90%">
+<tr><td>
+Lines 83 - 93 of projects/systems/58code_Gaea/Gaea/server/src/deploy/com/bj58/spat/gaea/server/deploy/bytecode/ScanClass.java
+<pre>
+	public static ContractInfo getContractInfo(String path, DynamicClassLoader classLoader) throws Exce		if(contractInfo == null) {
+			synchronized (lockHelper) {
+				if(contractInfo == null) {
+					scan(path, classLoader);
+				}
+			}
+		}
+		
+		return contractInfo;
+	}
+</pre>
+</td></tr>
+<tr><td>
+Lines 121 - 131 of projects/systems/58code_Gaea/Gaea/server/src/deploy/com/bj58/spat/gaea/server/deploy/bytecode/ScanClass.java
+<pre>
+	public static List&lt;ClassInfo&gt; getBehaviorClassInfos(String path, DynamicClassLoader classLoader) th		if(contractInfo == null) {
+			synchronized (lockHelper) {
+				if(contractInfo == null) {
+					scan(path, classLoader);
+				}
+			}
+		}
+		
+		return behaviorClassInfos;
+	}
+</pre>
+</td></tr>
+<tr><td>
+Lines 102 - 112 of projects/systems/58code_Gaea/Gaea/server/src/deploy/com/bj58/spat/gaea/server/deploy/bytecode/ScanClass.java
+<pre>
+	public static List&lt;ClassInfo&gt; getContractClassInfos(String path, DynamicClassLoader classLoader) th		if(contractInfo == null) {
+			synchronized (lockHelper) {
+				if(contractInfo == null) {
+					scan(path, classLoader);
+				}
+			}
+		}
+		
+		return contractClassInfos;
+	}
+</pre>
+</td></tr>
+</table>
+<h3>Clone class 4, 2 fragments, nominal size 17 lines, similarity 100%
+</h3>
+<table cellpadding=12 border=2 frame="box" width="90%">
+<tr><td>
+Lines 18 - 42 of projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/beans/support/SwingIdentityPropertyChangeSupport.java
+<pre>
+	public void fireIdentityPropertyChange(final PropertyChangeEvent evt)
+	{
+		if (EventQueue.isDispatchThread())
+		{
+			super.fireIdentityPropertyChange(evt);
+		}
+		else
+		{
+			try
+			{
+				EventQueue.invokeAndWait(new Runnable()
+					{
+						@Override
+						public void run()
+						{
+							fireIdentityPropertyChange(evt);
+						}
+					});
+			}
+			catch (Exception e)
+			{
+				LOGGER.error(e.getMessage(), e);
+			}
+		}
+	}
+</pre>
+</td></tr>
+<tr><td>
+Lines 45 - 69 of projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/beans/support/SwingIdentityPropertyChangeSupport.java
+<pre>
+	public void firePropertyChange(final PropertyChangeEvent evt)
+	{
+		if (EventQueue.isDispatchThread())
+		{
+			super.firePropertyChange(evt);
+		}
+		else
+		{
+			try
+			{
+				EventQueue.invokeAndWait(new Runnable()
+					{
+						@Override
+						public void run()
+						{
+							firePropertyChange(evt);
+						}
+					});
+			}
+			catch (Exception e)
+			{
+				LOGGER.error(e.getMessage(), e);
+			}
+		}
+	}
+</pre>
+</td></tr>
+</table>
+<h3>Clone class 5, 2 fragments, nominal size 12 lines, similarity 100%
+</h3>
+<table cellpadding=12 border=2 frame="box" width="90%">
+<tr><td>
+Lines 65 - 82 of projects/systems/360-Innovations_binding/binding/src/com/netappsid/undoredo/UndoRedoCollectionValueModel.java
+<pre>
+	public void undo(CollectionChangeEvent event)
+	{
+		try
+		{
+			getValueModel().removeCollectionChangeListener(this.collectionChangeHandler);
+			getUndoRedoManager().beginTransaction();
+			CollectionDifference difference = event.getDifference();
+
+			ObservableCollection source = getValueModel();
+			source.unapply(difference);
+
+		}
+		finally
+		{
+			getValueModel().addCollectionChangeListener(this.collectionChangeHandler);
+			getUndoRedoManager().endTransaction();
+		}
+	}
+</pre>
+</td></tr>
+<tr><td>
+Lines 84 - 105 of projects/systems/360-Innovations_binding/binding/src/com/netappsid/undoredo/UndoRedoCollectionValueModel.java
+<pre>
+	public void redo(CollectionChangeEvent event)
+	{
+		try
+		{
+			getValueModel().removeCollectionChangeListener(this.collectionChangeHandler);
+			getUndoRedoManager().beginTransaction();
+
+			CollectionDifference difference = event.getDifference();
+
+			// Always use the ValueModel's value since when an entity is reloaded, a new collection
+			// containing the same objects is recreated
+			ObservableCollection source = getValueModel();
+
+			source.apply(difference);
+
+		}
+		finally
+		{
+			getValueModel().addCollectionChangeListener(this.collectionChangeHandler);
+			getUndoRedoManager().endTransaction();
+		}
+	}
+</pre>
+</td></tr>
+</table>
+<h3>Clone class 6, 2 fragments, nominal size 11 lines, similarity 100%
+</h3>
+<table cellpadding=12 border=2 frame="box" width="90%">
+<tr><td>
+Lines 20 - 37 of projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/internal/ObservableFilteredListIterator.java
+<pre>
+	public boolean hasNext()
+	{
+		if (source.hasNext())
+		{
+			try
+			{
+				return predicate.apply(source.next()) ? true : hasNext();
+			}
+			finally
+			{
+				source.previous();
+			}
+		}
+		else
+		{
+			return false;
+		}
+	}
+</pre>
+</td></tr>
+<tr><td>
+Lines 47 - 64 of projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/internal/ObservableFilteredListIterator.java
+<pre>
+	public boolean hasPrevious()
+	{
+		if (source.hasPrevious())
+		{
+			try
+			{
+				return predicate.apply(source.previous()) ? true : hasPrevious();
+			}
+			finally
+			{
+				source.next();
+			}
+		}
+		else
+		{
+			return false;
+		}
+	}
+</pre>
+</td></tr>
+</table>
+<h3>Clone class 7, 2 fragments, nominal size 15 lines, similarity 93%
+</h3>
+<table cellpadding=12 border=2 frame="box" width="90%">
+<tr><td>
+Lines 466 - 486 of projects/systems/13leaf_QADDroid/QADDroid/QADDroid/src/com/qad/lang/Files.java
+<pre>
+	public static boolean deleteDir(File dir) {
+		if (null == dir || !dir.exists())
+			return false;
+		if (!dir.isDirectory())
+			throw new RuntimeException("\"" + dir.getAbsolutePath()
+					+ "\" should be a directory!");
+		File[] files = dir.listFiles();
+		boolean re = false;
+		if (null != files) {
+			if (files.length == 0)
+				return dir.delete();
+			for (File f : files) {
+				if (f.isDirectory())
+					re |= deleteDir(f);
+				else
+					re |= deleteFile(f);
+			}
+			re |= dir.delete();
+		}
+		return re;
+	}
+</pre>
+</td></tr>
+<tr><td>
+Lines 38 - 58 of projects/systems/13leaf_AndroidPackageTool/AndroidPackageTool/src/tools/Files.java
+<pre>
+	public static boolean deleteDir(File dir) {
+		if (null == dir || !dir.exists())
+			return false;
+		if (!dir.isDirectory())
+			throw new RuntimeException("\"" + dir.getAbsolutePath()
+					+ "\" should be a directory!");
+		File[] files = dir.listFiles();
+		boolean re = false;
+		if (null != files) {
+			if (files.length == 0)
+				return dir.delete();
+			for (File f : files) {
+				if (f.isDirectory())
+					re |= deleteDir(f);
+				else
+					re |= f.delete();
+			}
+			re |= dir.delete();
+		}
+		return re;
+	}
+</pre>
+</td></tr>
+</table>
+<h3>Clone class 8, 7 fragments, nominal size 10 lines, similarity 76%
+</h3>
+<table cellpadding=12 border=2 frame="box" width="90%">
+<tr><td>
+Lines 274 - 282 of projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/form/fields/FormItemIcon.java
+<pre>
+	public HandlerRegistration addFormItemClickHandler(final FormItemClickHandler handler) {
+		formItemClickHandlers.add(handler);
+		return new HandlerRegistration() {
+			@Override
+			public void removeHandler() {
+				formItemClickHandlers.remove(handler);
+			}
+		};
+	}
+</pre>
+</td></tr>
+<tr><td>
+Lines 3579 - 3587 of projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/Canvas.java
+<pre>
+	public HandlerRegistration addClickHandler(final ClickHandler handler) {
+		clickHandlers.add(handler);
+		return new HandlerRegistration() {
+			@Override
+			public void removeHandler() {
+				clickHandlers.remove(handler);
+			}
+		};
+	}
+</pre>
+</td></tr>
+<tr><td>
+Lines 1245 - 1253 of projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/Window.java
+<pre>
+	public HandlerRegistration addCloseClickHandler(final CloseClickHandler handler) {
+		closeClickHandlers.add(handler);
+		return new com.google.web.bindery.event.shared.HandlerRegistration() {
+			@Override
+			public void removeHandler() {
+				closeClickHandlers.remove(handler);
+			}
+		};
+	}
+</pre>
+</td></tr>
+<tr><td>
+Lines 7422 - 7430 of projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/ListGrid.java
+<pre>
+	public HandlerRegistration addSelectionUpdatedHandler(final SelectionUpdatedHandler handler) {
+		selectionUpdatedHandlers.add(handler);
+		return new HandlerRegistration() {
+			@Override
+			public void removeHandler() {
+				selectionUpdatedHandlers.remove(handler);
+			}
+		};
+	}
+</pre>
+</td></tr>
+<tr><td>
+Lines 7392 - 7400 of projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/ListGrid.java
+<pre>
+	public HandlerRegistration addRecordDoubleClickHandler(final RecordDoubleClickHandler handler) {
+		recordDoubleClickHandlers.add(handler);
+		return new HandlerRegistration() {
+			@Override
+			public void removeHandler() {
+				recordDoubleClickHandlers.remove(handler);
+			}
+		};
+	}
+</pre>
+</td></tr>
+<tr><td>
+Lines 57 - 68 of projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/extra/Refresher.java
+<pre>
+	public HandlerRegistration addListener(final RefreshListener listener) {
+		assert listener != null : "listener must not be null";
+		listeners.add(listener);
+		requestRepaint();
+		return new HandlerRegistration() {
+			@Override
+			public void removeHandler() {
+				listeners.remove(listener);
+				requestRepaint();
+			}
+		};
+	}
+</pre>
+</td></tr>
+<tr><td>
+Lines 7407 - 7415 of projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/ListGrid.java
+<pre>
+	public HandlerRegistration addSelectionChangedHandler(final SelectionChangedHandler handler) {
+		selectionChangedHandlers.add(handler);
+		return new HandlerRegistration() {
+			@Override
+			public void removeHandler() {
+				selectionChangedHandlers.remove(handler);
+			}
+		};
+	}
+</pre>
+</td></tr>
+</table>
+<h3>Clone class 9, 5 fragments, nominal size 11 lines, similarity 75%
+</h3>
+<table cellpadding=12 border=2 frame="box" width="90%">
+<tr><td>
+Lines 55 - 66 of projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/BorderLayout.java
+<pre>
+	public void setCenterMember(Canvas member) {
+		if (member == null) {
+			center.setWidth(0);
+			center.setHeight(0);
+			center.setMembers();
+		} else {
+			member.setHeight("100%");
+			member.setWidth("100%");
+			center.setWidth("100%");
+			center.setMembers(member);
+		}
+	}
+</pre>
+</td></tr>
+<tr><td>
+Lines 87 - 96 of projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/BorderLayout.java
+<pre>
+	public void setSouthMember(Canvas member) {
+		if (member == null) {
+			south.setHeight(0);
+			south.setMembers();
+		} else {
+			member.setWidth("100%");
+			south.setHeight(1);
+			south.setMembers(member);
+		}
+	}
+</pre>
+</td></tr>
+<tr><td>
+Lines 117 - 126 of projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/BorderLayout.java
+<pre>
+	public void setEastMember(Canvas member) {
+		if (member == null) {
+			east.setWidth(0);
+			east.setMembers();
+		} else {
+			member.setHeight("100%");
+			east.setWidth(1);
+			east.setMembers(member);
+		}
+	}
+</pre>
+</td></tr>
+<tr><td>
+Lines 72 - 81 of projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/BorderLayout.java
+<pre>
+	public void setNorthMember(Canvas member) {
+		if (member == null) {
+			north.setHeight(0);
+			north.setMembers();
+		} else {
+			member.setWidth("100%");
+			north.setHeight(1);
+			north.setMembers(member);
+		}
+	}
+</pre>
+</td></tr>
+<tr><td>
+Lines 102 - 111 of projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/BorderLayout.java
+<pre>
+	public void setWestMember(Canvas member) {
+		if (member == null) {
+			west.setWidth(0);
+			west.setMembers();
+		} else {
+			member.setHeight("100%");
+			west.setWidth(1);
+			west.setMembers(member);
+		}
+	}
+</pre>
+</td></tr>
+</table>
+<h3>Clone class 10, 2 fragments, nominal size 14 lines, similarity 100%
+</h3>
+<table cellpadding=12 border=2 frame="box" width="90%">
+<tr><td>
+Lines 73 - 88 of projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-couch/src/main/java/rxf/couch/CouchService.java
+<pre>
+    public Writer addAttachment(final String fileName, final String contentType) {
+      return new StringWriter() {
+
+        public void close() throws IOException {
+          JsonSendActionBuilder actionBuilder =
+              new JsonSend().opaque(db + "/" + id + "/" + fileName + "?rev=" + rev).validjson(
+                  getBuffer().toString()).to();
+          actionBuilder.hdr().headerString(HttpHeaders.Content$2dType, contentType);
+          CouchTx tx = actionBuilder.fire().tx();
+          if (!tx.ok()) {
+            throw new IOException(tx.error());
+          }
+          rev = tx.rev();
+        }
+      };
+    }
+</pre>
+</td></tr>
+<tr><td>
+Lines 100 - 115 of projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-couch/src/main/java/rxf/couch/CouchService.java
+<pre>
+    public Writer updateAttachment(final String fileName, final String contentType) {
+      return new StringWriter() {
+
+        public void close() throws IOException {
+          JsonSendActionBuilder actionBuilder =
+              new JsonSend().opaque(db + "/" + id + "/" + fileName + "?rev=" + rev).validjson(
+                  getBuffer().toString()).to();
+          actionBuilder.hdr().headerString(HttpHeaders.Content$2dType, contentType);
+          CouchTx tx = actionBuilder.fire().tx();
+          if (!tx.ok()) {
+            throw new IOException(tx.error());
+          }
+          rev = tx.rev();
+        }
+      };
+    }
+</pre>
+</td></tr>
+</table>
+</body>
+</html>

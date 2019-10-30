@@ -1,0 +1,68 @@
+<clones>
+<systeminfo processor="nicad5" system="systems" granularity="functions-blind" threshold="30%" minlines="10" maxlines="2500"/>
+<cloneinfo npcs="606" npairs="43"/>
+<runinfo ncompares="2953" cputime="51889"/>
+<classinfo nclasses="10"/>
+
+<class classid="1" nclones="3" nlines="17" similarity="70">
+<source file="projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/contentdirectory/DIDLParser.java" startline="841" endline="865" pcid="17"></source>
+<source file="projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/contentdirectory/DIDLParser.java" startline="887" endline="920" pcid="18"></source>
+<source file="projects/systems/4thline_cling/cling/support/src/main/java/org/fourthline/cling/support/contentdirectory/DIDLParser.java" startline="969" endline="989" pcid="19"></source>
+</class>
+
+<class classid="2" nclones="3" nlines="10" similarity="70">
+<source file="projects/systems/58code_Gaea/Gaea/server/src/core/com/bj58/spat/gaea/server/core/convert/JsonConvert.java" startline="44" endline="53" pcid="54"></source>
+<source file="projects/systems/58code_Gaea/Gaea/server/src/core/com/bj58/spat/gaea/server/core/convert/JsonConvert.java" startline="99" endline="108" pcid="63"></source>
+<source file="projects/systems/a.java" startline="1" endline="10" pcid="501"></source>
+</class>
+
+<class classid="3" nclones="3" nlines="10" similarity="90">
+<source file="projects/systems/58code_Gaea/Gaea/server/src/deploy/com/bj58/spat/gaea/server/deploy/bytecode/ScanClass.java" startline="83" endline="93" pcid="76"></source>
+<source file="projects/systems/58code_Gaea/Gaea/server/src/deploy/com/bj58/spat/gaea/server/deploy/bytecode/ScanClass.java" startline="121" endline="131" pcid="78"></source>
+<source file="projects/systems/58code_Gaea/Gaea/server/src/deploy/com/bj58/spat/gaea/server/deploy/bytecode/ScanClass.java" startline="102" endline="112" pcid="77"></source>
+</class>
+
+<class classid="4" nclones="2" nlines="17" similarity="100">
+<source file="projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/beans/support/SwingIdentityPropertyChangeSupport.java" startline="18" endline="42" pcid="173"></source>
+<source file="projects/systems/360-Innovations_binding/binding/src/com/netappsid/binding/beans/support/SwingIdentityPropertyChangeSupport.java" startline="45" endline="69" pcid="175"></source>
+</class>
+
+<class classid="5" nclones="2" nlines="12" similarity="100">
+<source file="projects/systems/360-Innovations_binding/binding/src/com/netappsid/undoredo/UndoRedoCollectionValueModel.java" startline="65" endline="82" pcid="188"></source>
+<source file="projects/systems/360-Innovations_binding/binding/src/com/netappsid/undoredo/UndoRedoCollectionValueModel.java" startline="84" endline="105" pcid="189"></source>
+</class>
+
+<class classid="6" nclones="2" nlines="11" similarity="100">
+<source file="projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/internal/ObservableFilteredListIterator.java" startline="20" endline="37" pcid="269"></source>
+<source file="projects/systems/360-Innovations_observable/observable/src/com/netappsid/observable/internal/ObservableFilteredListIterator.java" startline="47" endline="64" pcid="271"></source>
+</class>
+
+<class classid="7" nclones="2" nlines="15" similarity="93">
+<source file="projects/systems/13leaf_QADDroid/QADDroid/QADDroid/src/com/qad/lang/Files.java" startline="466" endline="486" pcid="311"></source>
+<source file="projects/systems/13leaf_AndroidPackageTool/AndroidPackageTool/src/tools/Files.java" startline="38" endline="58" pcid="497"></source>
+</class>
+
+<class classid="8" nclones="7" nlines="10" similarity="76">
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/form/fields/FormItemIcon.java" startline="274" endline="282" pcid="323"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/Canvas.java" startline="3579" endline="3587" pcid="440"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/Window.java" startline="1245" endline="1253" pcid="338"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/ListGrid.java" startline="7422" endline="7430" pcid="454"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/ListGrid.java" startline="7392" endline="7400" pcid="448"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/extra/Refresher.java" startline="57" endline="68" pcid="379"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/grid/ListGrid.java" startline="7407" endline="7415" pcid="451"></source>
+</class>
+
+<class classid="9" nclones="5" nlines="11" similarity="75">
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/BorderLayout.java" startline="55" endline="66" pcid="360"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/BorderLayout.java" startline="87" endline="96" pcid="364"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/BorderLayout.java" startline="117" endline="126" pcid="368"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/BorderLayout.java" startline="72" endline="81" pcid="362"></source>
+<source file="projects/systems/360-Innovations_VaadinSmartGWT/VaadinSmartGWT/org.vaadin.smartgwt/src/main/java/org/vaadin/smartgwt/server/layout/BorderLayout.java" startline="102" endline="111" pcid="366"></source>
+</class>
+
+<class classid="10" nclones="2" nlines="14" similarity="100">
+<source file="projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-couch/src/main/java/rxf/couch/CouchService.java" startline="73" endline="88" pcid="491"></source>
+<source file="projects/systems/0xCopy_RelaxFactory/RelaxFactory/rxf-couch/src/main/java/rxf/couch/CouchService.java" startline="100" endline="115" pcid="494"></source>
+</class>
+
+</clones>
