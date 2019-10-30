@@ -187,11 +187,13 @@ for key_path in pathInfos:
 
     clone_num += 1
 
-# shutil.rmtree("C:Users\\ryosuke-ku\\Desktop\\TCS\\NICAD\\projects\\systems_functions-blind-clones")
-NICAD_functionPath_xml = glob.glob('file:///Users/ryosuke/Desktop/TCS/NiCad-5.0/projects/*.xml', recursive=True)
+shutil.rmtree("/Users/ryosuke/Desktop/TCS/NiCad-5.0/projects/systems_functions-blind-clones")
+NICAD_functionPath_xml = glob.glob('/Users/ryosuke/Desktop/TCS/NiCad-5.0/projects/*.xml', recursive=True)
+print(NICAD_functionPath_xml)
 for functionPath_xml in NICAD_functionPath_xml:
     os.remove(functionPath_xml)
 
-NICAD_functionPath_log = glob.glob('file:///Users/ryosuke/Desktop/TCS/NiCad-5.0/projects/*.log', recursive=True)
+NICAD_functionPath_log = glob.glob('/Users/ryosuke/Desktop/TCS/NiCad-5.0/projects/*.log', recursive=True)
 for functionPath_log in NICAD_functionPath_log:
     os.remove(functionPath_log)
+print(NICAD_functionPath_log)
