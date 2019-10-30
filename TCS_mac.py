@@ -34,5 +34,5 @@ cp = subprocess.run(['./nicad5','functions','java','projects/' + project_list[0]
 os.chdir('/Users/ryosuke/Desktop/TCS')
 print(os.getcwd())
 
-# cp2 = subprocess.run(['python','scraping.py'])
+cp2 = subprocess.run(['python','TCS_scrap_generation_mac.py'])
 
